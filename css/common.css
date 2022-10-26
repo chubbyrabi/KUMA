@@ -1,0 +1,419 @@
+/* ----- 文字設定 ----- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
+
+.h1-style{
+    font-family: 'Noto Sans TC';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+.h2-style{
+    font-family: 'Noto Sans TC';
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+.h3-style{
+    font-family: 'Noto Sans TC';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+.h4-style{
+    font-family: 'Noto Sans TC';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+.p-style{
+    font-family: 'Noto Sans TC';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+
+
+
+/* ----- 通用設定 ----- */
+body{
+    position: relative;
+    font-size: 0;
+    /* 去除各種間隙與 h1(logo) 文字 */
+}
+img, svg{
+    width: 100%;
+    vertical-align:top;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* ----- btn 設定 ----- */
+.btn-teal{
+    position: relative;
+    padding: 10px 50px;
+    border: none;
+    background-color: #00ADBB;
+    font-family: 'NeverMind','Noto Sans TC';
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+.btn-teal:hover::after{
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    content: '';
+    background-image: url("../pic/deco/shock-teal-40deg.svg");
+    background-position: center;
+    background-size: contain;
+    width: 45px;
+    height: 35px;
+    transform: none;
+}
+.btn-animateBox.in{
+    transform: scale(1);
+    transition: 0.5s 0.5s;
+}
+.btn-animateBox, .btn-animateBox.out{
+    transform: scale(0);
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+
+/* ----- icon 設定 ----- */
+.icon-gray{
+    fill: #333;
+    transform: scale(1);
+}
+
+
+
+/* ----- header ----- */
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: #fff;
+    transition: 1s;
+}
+header.js-hd-shadow{
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+.navbar{
+    padding: 2% 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-logo svg{
+    height: 30px;
+    fill: #333;
+}
+/* ----- hb-animation ----- */
+.nav-hb{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+.nav-hb span{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2.4px;
+    transform: rotate(0deg);
+    transition: 0.3s;
+    background-color: #333;
+}
+.nav-hb span:nth-child(1){
+    top: 3.8px;
+}
+.nav-hb span:nth-child(2){
+    top: 13.8px;
+    opacity: 1;
+}
+.nav-hb span:nth-child(3){
+    top: 23.8px;
+}
+.js-click.on.nav-hb span{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.js-click.on.nav-hb span:nth-child(1){
+    top: 13.8px;
+    transform: rotate(45deg);
+}
+.js-click.on.nav-hb span:nth-child(2){
+    opacity: 0;
+}
+.js-click.on.nav-hb span:nth-child(3){
+    top: 13.8px;
+    transform: rotate(-45deg);
+}
+/* ----- menu-animation ----- */
+.nav-menu{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 80%;
+    padding: 10%;
+    background-color: #00ADBB;
+    opacity: 0;
+    transition: opacity 0.5s, left 0s 0.5s;
+}
+.js-click.on.nav-hb + .nav-menu{
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.menu-list{
+    position: relative;
+    left: -100%;
+    transition: 0.5s;
+}
+.js-click.on.nav-hb + .nav-menu .menu-list{
+    left: 0;
+    transition: 0.5s;
+}
+.menu-logo a{
+    display: block;
+    width: 180px;
+    margin-bottom: 10px;
+}
+.menu-logo svg{
+    fill: #fff;
+}
+.menu-list>li{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 12px;
+}
+.menu-list span{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+.menu-list a{
+    font-family: 'NeverMind';
+    color: #fff;
+}
+.menu-list>li:not(:first-child)>a:hover::before{
+    position: absolute;
+    top: -12px;
+    left: -22px;
+    content: '';
+    background-image: url("/pic/deco/shock-fff-40deg.svg");
+    width: 32px;
+    height: 25px;
+}
+.menu-secondList li{
+    display: inline-block;
+    margin: 7px;
+    opacity: 0.6;
+    transition: 0.15s;
+}
+
+
+
+/* ----- footer ----- */
+footer{
+    position: relative;
+    display: block;
+    background-color: #00ADBB;
+}
+.scrollTop-hoverBox{
+    position: relative;
+    overflow: hidden;
+    top: -60px;
+    height: 60px;
+    width: 50vw;
+    max-width: 400px;
+    margin: 50px auto 0;
+}
+.scrollTop::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400%;
+    background-color: #B3E6EB;
+    border-radius: 50% 50% 0 0;
+}
+.scrollTop img{
+    position: relative;
+    top: 10px;
+    left: calc(50% - 20px);
+    width: 40px;
+}
+.scrollTop span{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'NeverMind';
+    font-weight: 900;
+    white-space: nowrap;
+    color: #333;
+    font-size: 1.8vw;
+    bottom: 1.5vw;
+}
+
+
+
+/* ----- >= 768 ----- */
+@media screen and (min-width: 768px){
+    /* ----- scrollTop 動畫 hover 縮放 ----- */
+    .scrollTop-hoverBox{
+        padding: 20px 20px 0;
+        top: -100px;
+        height: 80px;
+    }
+    .scrollTop{
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        transition: 0.5s;
+    }
+    .scrollTop img{
+        top: 15px;
+        left: calc(50% - 25px);
+        width: 50px;
+    }
+    .scrollTop span{
+        font-size: 16px;
+        bottom: 10px;
+    }
+}
+
+
+
+/* ----- >= 1024 ----- */
+@media screen and (min-width: 1024px){
+    /* ----- 文字設定 ----- */
+    .h1-style{
+        font-size: 35px;
+    }
+    .h2-style{
+        font-size: 28px;
+    }
+}
+
+
+
+/* ----- >= 1200 ----- */
+@media screen and (min-width: 1200px){
+    /* ----- 文字設定 ----- */
+    .h1-style{
+        font-size: 40px;
+    }
+    .h2-style{
+        font-size: 30px;
+    }
+    /* ----- 按鈕設定 ----- */
+    .btn-teal:hover{
+        outline: 2px solid #00ADBB;
+        background-color: #fff;
+        color: #00ADBB;
+    }
+    /* ----- 通用設定 ----- */
+    /* ----- icon 設定 ----- */
+    .icon-gray:hover{
+        fill: #00ADBB;
+        transform: scale(1.1);
+    }
+    .hvr-pointer, .eraser{
+        cursor: pointer;
+    }
+    .hvr-colorTeal:hover{
+        fill: #00ADBB;
+        color: #00ADBB;
+    }
+    .hvr-colorWhite:hover{
+        fill: #fff;
+        color: #fff;
+    }
+    .hvr-ts03, .hvr-ts03:hover{
+        transition: 0.3s;
+    }
+    .hvr-scale11{
+        transform: scale(1);
+    }
+    .hvr-scale11:hover{
+        transform: scale(1.1);
+    }
+    /* ----- header ----- */
+    .navbar{
+        padding: 20px 10px;
+        max-width: 1380px;
+        margin: auto;
+    }
+    .nav-hb:hover span{
+        background-color: #00ADBB;
+        transition: 0.3s;
+    }
+    .js-click.on.nav-hb:before{
+        position: absolute;
+        right: 130%;
+        content: 'Close';
+        font-family: 'Noto Sans TC';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+        color: #fff;
+    }
+    .nav-menu{
+        width: calc(100% - 240px);
+        padding: 0 120px;
+    }
+    .menu-list{
+        max-width: 1200px;
+        margin: auto;
+        left: 0; /* 不要動畫 */
+        top: 50%;
+        transform: translateY( -50%);
+        display: grid;
+        grid-auto-flow: column;
+        /* grid-template-rows: 2fr 2fr 1fr; */
+        grid-template-columns: 3fr 4fr 280px;
+        gap: 50px 30px;
+    }
+    .menu-logo{
+        grid-row: 1/4;
+    }
+    .menu-logo svg:hover{
+        fill-opacity: 0.6;
+    }
+    .menu-secondList li a:hover{
+        color: #333;
+        transition: 0.15s;
+    }
+    /* ----- footer ----- */
+    .scrollTop:hover{
+        transform: scale(1.15);
+        transition: 0.5s;
+    }
+}
