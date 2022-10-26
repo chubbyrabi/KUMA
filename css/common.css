@@ -79,7 +79,7 @@ a{
     top: -30px;
     right: -40px;
     content: '';
-    background-image: url("/pic/deco/shock-teal-40deg.svg");
+    background-image: url("./pic/deco/shock-teal-40deg.svg");
     background-position: center;
     background-size: contain;
     width: 45px;
@@ -224,7 +224,7 @@ header.js-hd-shadow{
     top: -12px;
     left: -22px;
     content: '';
-    background-image: url("/pic/deco/shock-fff-40deg.svg");
+    background-image: url("./pic/deco/shock-fff-40deg.svg");
     width: 32px;
     height: 25px;
 }
