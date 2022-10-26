@@ -86,7 +86,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: '';
-    background-image: url("./pic/deco/shock-333.svg");
+    background-image: url("/pic/deco/shock-333.svg");
     background-position: center;
     background-size: contain;
     width: 50px;
