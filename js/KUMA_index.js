@@ -55,6 +55,20 @@ function mousemove(event){
 window.addEventListener('mousemove', mousemove);
 
 
+$(function(){
+    $('.class-series>li').on('click',function(){
+        if($(this).attr('data-clickState') == 1) {
+            $(this).attr('data-clickState', 0);
+            $('.class-series>li').not(this).attr('data-clickState') == 1;
+
+            // $(this).find('.plus-minus').addClass('js-click');
+            // $('.class-series>li').not(this).find('.plus-minus').remove('js-click');
+        }
+        else {
+            $(this).attr('data-clickState', 1);
+        }
+    });
+});
 
 // 橡皮擦 4.0 版
 $(function eraser(){
@@ -65,10 +79,11 @@ $(function eraser(){
         clearTimeout(timer);
 
         if( winW >= 768 ){
+            $('.eraser .js-yell').remove();
+            // 避免重複喊叫
             $('.js-yell').clone().appendTo(this);
             let theText = $(this).attr('data-text');
             $(this).find('.js-yell').show().text(theText);
-            $('.eraser').not(this).find('.js-yell').remove();
 
             timer = setTimeout(function(){
                 $('.eraser .js-yell').remove();
