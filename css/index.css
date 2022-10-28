@@ -184,7 +184,7 @@
 /* ----- activity ----- */
 .activity{
     position: relative;
-    padding: 0 2.5% 100px;
+    padding: 0 2.5%;
 }
 .activity-title h2{
     margin: auto;
@@ -384,7 +384,10 @@
         position: fixed;
         top: calc(50% - 100px);
         transform: translateY(-50%);
+        /* ----- 打開網頁會旋轉 ----- */
         transform: rotate(180deg);
+        /* transform: rotateX(180deg); */
+        /* ----- 打開網頁旋轉 ----- */
         width: 10px;
         height: 200px;
         background-color: #00ADBB;

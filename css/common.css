@@ -3,7 +3,7 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
 
 .h1-style{
-    font-family: 'Noto Sans TC';
+    font-family: 'NeverMind','Noto Sans TC';
     font-size: 30px;
     font-weight: 700;
     line-height: 1.4em;
@@ -11,7 +11,7 @@
     color: #333;
 }
 .h2-style{
-    font-family: 'Noto Sans TC';
+    font-family: 'NeverMind','Noto Sans TC';
     font-size: 26px;
     font-weight: 700;
     line-height: 1.5em;
@@ -19,7 +19,7 @@
     color: #333;
 }
 .h3-style{
-    font-family: 'Noto Sans TC';
+    font-family: 'NeverMind','Noto Sans TC';
     font-size: 22px;
     font-weight: 500;
     line-height: 1.5em;
@@ -27,7 +27,7 @@
     color: #333;
 }
 .h4-style{
-    font-family: 'Noto Sans TC';
+    font-family: 'NeverMind','Noto Sans TC';
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5em;
@@ -103,7 +103,6 @@ a{
     fill: #333;
     transform: scale(1);
 }
-
 
 
 /* ----- header ----- */
@@ -216,7 +215,6 @@ header.js-hd-shadow{
     letter-spacing: 0.05em;
 }
 .menu-list a{
-    font-family: 'NeverMind';
     color: #fff;
 }
 .menu-list>li:not(:first-child)>a:hover::before{
@@ -239,18 +237,31 @@ header.js-hd-shadow{
 
 /* ----- footer ----- */
 footer{
+    margin-top: 150px;
     position: relative;
+    overflow: hidden;
     display: block;
     background-color: #00ADBB;
 }
+.footer-area{
+    margin: 50px auto;
+    max-width: 1380px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    /* outline: 1px solid red; */
+}
 .scrollTop-hoverBox{
-    position: relative;
+    position: absolute;
     overflow: hidden;
     top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
     height: 60px;
     width: 50vw;
     max-width: 400px;
-    margin: 50px auto 0;
 }
 .scrollTop::before{
     content: '';
@@ -277,8 +288,47 @@ footer{
     font-weight: 900;
     white-space: nowrap;
     color: #333;
-    font-size: 1.8vw;
+    font-size: 3vw;
     bottom: 1.5vw;
+}
+/* ------------------ */
+.test a img{
+    fill: #fff;
+}
+/* .footer-logo{
+    display: inline-block;
+    height: 30px;
+} */
+.footer-logo svg{
+    display: inline-block;
+    width: fit-content;
+    width: 208px;
+    /* height: 50px; */
+    fill: #333;
+}
+.footer-logo div{
+    font-weight: 400;
+}
+.footer-logo div:last-child{
+    /* position: relative; */
+    /* position: sticky; */
+    /* bottom: 0; */
+
+}
+.footer-area>ul, .footer-area>div{
+    /* display: inline-block;
+    vertical-align: top; */
+}
+.footer-menu li+li{
+    margin-top: 20px;
+    /* line-height: 1em; */
+    /* outline: 1px solid red */
+}
+.footer-menu span{
+    display: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
 }
 
 
