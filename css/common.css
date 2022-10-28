@@ -63,28 +63,23 @@ a{
 
 
 /* ----- btn 設定 ----- */
-.btn-teal{
+.btn{
     position: relative;
     padding: 10px 50px;
     border: none;
-    background-color: #00ADBB;
     font-family: 'NeverMind','Noto Sans TC';
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.05em;
+}
+.btn-teal{
+    background-color: #00ADBB;
     color: #fff;
 }
-.btn-teal:hover::after{
-    position: absolute;
-    top: -30px;
-    right: -40px;
-    content: '';
-    background-image: url("../pic/deco/shock-teal-40deg.svg");
-    background-position: center;
-    background-size: contain;
-    width: 45px;
-    height: 35px;
-    transform: none;
+.btn-white{
+    outline: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
 }
 .btn-animateBox.in{
     transform: scale(1);
@@ -99,9 +94,29 @@ a{
 
 
 /* ----- icon 設定 ----- */
-.icon-gray{
+.icon{
+    --icon-width: 25px;
+    --icon-height: 25px;
+    width:  var(--icon-width);
+    height: var(--icon-width);
+}
+.icon-white svg{
+    fill: #fff;
+    width:  var(--icon-width);
+    height: var(--icon-width);
+}
+.icon-gray svg{
     fill: #333;
-    transform: scale(1);
+    --icon-width: 25px;
+    --icon-height: 25px;
+    width:  var(--icon-width);
+    height: var(--icon-width);
+}
+.icon-list li{
+    display: inline-block;
+}
+.icon-list li:not(:last-child){
+    margin-right: 20px;
 }
 
 
@@ -222,7 +237,7 @@ header.js-hd-shadow{
     top: -12px;
     left: -22px;
     content: '';
-    background-image: url("../pic/deco/shock-fff-40deg.svg");
+    background-image: url("../pic/deco/shock-fff-40deg_L.svg");
     width: 32px;
     height: 25px;
 }
@@ -237,21 +252,17 @@ header.js-hd-shadow{
 
 /* ----- footer ----- */
 footer{
-    margin-top: 150px;
     position: relative;
-    overflow: hidden;
-    display: block;
     background-color: #00ADBB;
 }
 .footer-area{
-    margin: 50px auto;
+    margin: 150px auto 0;
     max-width: 1380px;
-    padding: 10px;
+    padding: 30px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
-    /* outline: 1px solid red; */
 }
 .scrollTop-hoverBox{
     position: absolute;
@@ -292,14 +303,11 @@ footer{
     bottom: 1.5vw;
 }
 /* ------------------ */
-.test a img{
-    fill: #fff;
+.footer-logo{
+    display: flex;
+    flex-direction: column;
 }
-/* .footer-logo{
-    display: inline-block;
-    height: 30px;
-} */
-.footer-logo svg{
+.footer-logo a{
     display: inline-block;
     width: fit-content;
     width: 208px;
@@ -309,20 +317,17 @@ footer{
 .footer-logo div{
     font-weight: 400;
 }
+.footer-logo div:first-child{
+    flex-grow: 1;
+}
+.footer-logo div:nth-of-type(2){
+    /* flex-grow: 1; */
+}
 .footer-logo div:last-child{
-    /* position: relative; */
-    /* position: sticky; */
-    /* bottom: 0; */
 
 }
-.footer-area>ul, .footer-area>div{
-    /* display: inline-block;
-    vertical-align: top; */
-}
 .footer-menu li+li{
-    margin-top: 20px;
-    /* line-height: 1em; */
-    /* outline: 1px solid red */
+    margin-top: 10px;
 }
 .footer-menu span{
     display: none;
@@ -330,6 +335,7 @@ footer{
     font-weight: 500;
     letter-spacing: 0.05em;
 }
+
 
 
 
@@ -382,20 +388,69 @@ footer{
     .h2-style{
         font-size: 30px;
     }
-    /* ----- 按鈕設定 ----- */
+    /* ----- btn 設定 ----- */
     .btn-teal:hover{
         outline: 2px solid #00ADBB;
         background-color: #fff;
         color: #00ADBB;
     }
+    .btn-white:hover{
+        background-color: #fff;
+        color: #00ADBB;
+    }
+    .btn:hover::after{
+        position: absolute;
+        top: -30px;
+        right: -40px;
+        content: '';
+        background-position: center;
+        background-size: contain;
+        width: 45px;
+        height: 35px;
+        transform: none;
+    }
+    .btn-teal:hover::after{
+        background-image: url("../pic/deco/shock-teal-40deg_R.svg");
+    }
+    .btn-white:hover::after{
+        background-image: url("../pic/deco/shock-fff-40deg_R.svg");
+    }
     /* ----- 通用設定 ----- */
-    /* ----- icon 設定 ----- */
-    .icon-gray:hover{
+    /* ----- hvr 設定 ----- */
+    .hvr-ts03, .hvr-ts03:hover{
+        transition: 0.3s;
+    }
+    .hvr-colorTeal:hover{
         fill: #00ADBB;
+        color: #00ADBB;
+    }
+    .hvr-colorTeal60:hover{
+        fill: #66CED6;
+        color: #66CED6;
+    }
+    .hvr-colorTeal30:hover{
+        fill: #B3E6EB;
+        color: #B3E6EB;
+    }
+    .hvr-colorWhite:hover{
+        fill: #fff;
+        color: #fff;
+    }
+    .hvr-scale11{
+        transform: scale(1);
+    }
+    .hvr-scale11:hover{
+        transform: scale(1.1);
+    }
+    /* ----- icon 設定 ----- */
+    .icon-gray svg:hover{
         transform: scale(1.1);
     }
     .hvr-pointer, .eraser{
         cursor: pointer;
+    }
+    .hvr-ts03, .hvr-ts03:hover{
+        transition: 0.3s;
     }
     .hvr-colorTeal:hover{
         fill: #00ADBB;
@@ -404,9 +459,6 @@ footer{
     .hvr-colorWhite:hover{
         fill: #fff;
         color: #fff;
-    }
-    .hvr-ts03, .hvr-ts03:hover{
-        transition: 0.3s;
     }
     .hvr-scale11{
         transform: scale(1);

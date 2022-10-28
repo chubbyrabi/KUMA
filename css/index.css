@@ -121,14 +121,6 @@
     line-height: 1.2em;
     color: #333;
 }
-.icon-list li{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-}
-.icon-list li:not(:last-child){
-    margin-right: 20px;
-}
 #move-line-box{
     padding: 30px;
     position: relative;
