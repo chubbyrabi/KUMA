@@ -8,7 +8,7 @@
     font-weight: 700;
     line-height: 1.4em;
     letter-spacing: 0.05em;
-    color: #333;
+    color: var(--clr-color);
 }
 .h2-style{
     font-family: 'NeverMind','Noto Sans TC';
@@ -16,7 +16,7 @@
     font-weight: 700;
     line-height: 1.5em;
     letter-spacing: 0.05em;
-    color: #333;
+    color: var(--clr-color);
 }
 .h3-style{
     font-family: 'NeverMind','Noto Sans TC';
@@ -24,7 +24,7 @@
     font-weight: 500;
     line-height: 1.5em;
     letter-spacing: 0.05em;
-    color: #333;
+    color: var(--clr-color);
 }
 .h4-style{
     font-family: 'NeverMind','Noto Sans TC';
@@ -32,7 +32,7 @@
     font-weight: 400;
     line-height: 1.5em;
     letter-spacing: 0.05em;
-    color: #333;
+    color: var(--clr-color);
 }
 .p-style{
     font-family: 'Noto Sans TC';
@@ -40,9 +40,75 @@
     font-weight: 300;
     line-height: 1.6em;
     letter-spacing: 0.05em;
-    color: #333;
+    color: var(--clr-color);
 }
 
+
+
+/* ----- 顏色設定 ----- */
+.clr-gray{
+    --clr-color:#333;
+    --clr-fill: #333;
+    --clr-bgd:  #333;
+}
+.clr-white{
+    --clr-color:#fff;
+    --clr-fill: #fff;
+    --clr-bgd:  #fff;
+}
+.clr-teal{
+    --clr-color:#00ADBB;
+    --clr-fill: #00ADBB;
+    --clr-bgd:  #00ADBB;
+}
+.clr-teal60{
+    --clr-color:#66CED6;
+    --clr-fill: #66CED6;
+    --clr-bgd:  #66CED6;
+}
+.clr-teal30{
+    --clr-color:#B3E6EB;
+    --clr-fill: #B3E6EB;
+    --clr-bgd:  #B3E6EB;
+}
+
+
+
+/* ----- hvr 效果設定 ----- */
+.hvr-gray{
+    --hvr-color: #333;
+    --hvr-fill:  #333;
+    --hvr-bgd:   #333;
+}
+.hvr-white{
+    --hvr-color: #fff;
+    --hvr-fill:  #fff;
+    --hvr-bgd:   #fff;
+}
+.hvr-teal{
+    --hvr-color: #00ADBB;
+    --hvr-fill:  #00ADBB;
+    --hvr-bgd:   #00ADBB;
+}
+.hvr-teal60{
+    --hvr-color: #66CED6;
+    --hvr-fill:  #66CED6;
+    --hvr-bgd:   #66CED6;
+}
+.hvr-teal30{
+    --hvr-color: #B3E6EB;
+    --hvr-fill:  #B3E6EB;
+    --hvr-bgd:   #B3E6EB;
+}
+.hvr-ts03{
+    --hvr-transition: 0.3s;
+}
+.hvr-scale11{
+    --hvr-scale: scale(1.1);
+}
+.hvr-pointer{
+    cursor: pointer;
+}
 
 
 /* ----- 通用設定 ----- */
@@ -51,13 +117,36 @@ body{
     font-size: 0;
     /* 去除各種間隙與 h1(logo) 文字 */
 }
-img, svg{
+img{
     width: 100%;
     vertical-align:top;
 }
+svg{
+    fill: var(--clr-fill);
+    transition: var(--hvr-transition);
+}
 a{
+    color: var(--clr-color);
     text-decoration: none;
-    color: inherit;
+}
+
+
+
+/* ----- icon 設定 ----- */
+.icon{
+    display: inline-block;
+    --icon-width: 25px;
+    --icon-height: 25px;
+    width:  var(--icon-width);
+    height: var(--icon-height);
+}
+.icon:not(:last-child){
+    margin-right: 20px;
+}
+.icon svg{
+    width:  var(--icon-width);
+    height: var(--icon-height);
+    transform: scale(1);
 }
 
 
@@ -93,51 +182,6 @@ a{
 
 
 
-/* ----- color 設定 ----- */
-.clr-gray{
-    --clr-color:#333;
-    --clr-fill: #333;
-}
-.clr-white{
-    --clr-color:#fff;
-    --clr-fill: #fff;
-}
-.clr-teal{
-    --clr-color:#00ADBB;
-    --clr-fill: #00ADBB;
-}
-.clr-teal60{
-    --clr-color:#66CED6;
-    --clr-fill: #66CED6;
-}
-.clr-teal30{
-    --clr-color:#B3E6EB;
-    --clr-fill: #B3E6EB;
-}
-
-
-
-/* ----- icon 設定 ----- */
-.icon{
-    display: inline-block;
-    --icon-width: 25px;
-    --icon-height: 25px;
-    width:  var(--icon-width);
-    height: var(--icon-width);
-}
-.icon:not(:last-child){
-    margin-right: 20px;
-}
-.icon svg{
-    fill: #333;
-    fill: var(--clr-fill);
-    width:  var(--icon-width);
-    height: var(--icon-width);
-}
-
-
-
-
 /* ----- header ----- */
 header{
     width: 100%;
@@ -158,8 +202,8 @@ header.js-hd-shadow{
 }
 .nav-logo svg{
     height: 30px;
-    fill: #333;
 }
+
 /* ----- hb-animation ----- */
 .nav-hb{
     position: relative;
@@ -202,6 +246,7 @@ header.js-hd-shadow{
     top: 13.8px;
     transform: rotate(-45deg);
 }
+
 /* ----- menu-animation ----- */
 .nav-menu{
     position: absolute;
@@ -233,22 +278,14 @@ header.js-hd-shadow{
     width: 180px;
     margin-bottom: 10px;
 }
-.menu-logo svg{
-    fill: #fff;
-}
 .menu-list>li{
     position: relative;
-    width: fit-content;
-    height: fit-content;
     margin: 12px;
 }
 .menu-list span{
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.05em;
-}
-.menu-list a{
-    color: #fff;
 }
 .menu-list>li:not(:first-child)>a:hover::before{
     position: absolute;
@@ -273,15 +310,8 @@ footer{
     position: relative;
     background-color: #00ADBB;
 }
-.footer-area{
-    margin: 150px auto 0;
-    max-width: 1380px;
-    padding: 50px 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-}
+
+/* ----- scrollTop ----- */
 .scrollTop-hoverBox{
     position: absolute;
     overflow: hidden;
@@ -320,42 +350,50 @@ footer{
     font-size: 3vw;
     bottom: 1.5vw;
 }
-/* ------------------ */
-.footer-logo{
+
+/* ----- footer-area ----- */
+.footer-area{
+    margin: 150px auto 0;
+    max-width: 1380px;
+    padding: 100px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.footer-icon, .footer-info{
     display: flex;
     flex-direction: column;
+}
+.footer-icon ul, .footer-info ul{
+    flex-grow: 1;
+}
+.footer-info li+li, .footer-info div+div{
+    margin-top: 5px;
 }
 .footer-logo a{
     display: inline-block;
     width: fit-content;
-    width: 208px;
-    /* height: 50px; */
+    width: 160px;
     fill: #333;
+    margin-bottom: 20px;
 }
-.footer-logo div{
-    font-weight: 400;
-}
-.footer-logo div:first-child{
-    flex-grow: 1;
-}
-.footer-logo div:nth-of-type(2){
-    /* flex-grow: 1; */
-}
-.footer-logo div:last-child{
-
-}
-.footer-menu li+li{
+.copyright{
     margin-top: 10px;
 }
-/* ----- 測試 ----- */
-.footer-menu span{
-    display: none;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+.footer-menu li+li{
+    margin-top: 20px;
 }
-/* ----- 測試 ----- */
-
+.copyright, .footer-info div{
+    font-weight: 400;
+}
+.footer-info ul li:first-child{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.footer-info a:hover{
+    opacity: 0.6;
+}
 
 
 /* ----- >= 768 ----- */
@@ -407,6 +445,17 @@ footer{
     .h2-style{
         font-size: 30px;
     }
+    /* ----- 通用設定 ----- */
+    svg:hover{
+        fill: var(--hvr-fill);
+        transition: var(--hvr-transition);
+    }
+    /* ----- icon 設定 ----- */
+    .icon svg:hover{
+        fill: var(--hvr-fill);
+        transform: var(--hvr-scale);
+        transition: var(--hvr-transition);
+    }
     /* ----- btn 設定 ----- */
     .btn-teal:hover{
         outline: 2px solid #00ADBB;
@@ -433,37 +482,6 @@ footer{
     }
     .btn-white:hover::after{
         background-image: url("../pic/deco/shock-fff-40deg_R.svg");
-    }
-    /* ----- 通用設定 ----- */
-    /* ----- hvr 設定 ----- */
-    .hvr-ts03, .hvr-ts03:hover{
-        transition: 0.3s;
-    }
-    .hvr-colorTeal:hover{
-        fill: #00ADBB;
-        color: #00ADBB;
-    }
-    .hvr-colorTeal60:hover{
-        fill: #66CED6;
-        color: #66CED6;
-    }
-    .hvr-colorTeal30:hover{
-        fill: #B3E6EB;
-        color: #B3E6EB;
-    }
-    .hvr-colorWhite:hover{
-        fill: #fff;
-        color: #fff;
-    }
-    .hvr-scale11{
-        transform: scale(1);
-    }
-    .hvr-scale11:hover{
-        transform: scale(1.1);
-    }
-    /* ----- icon 設定 ----- */
-    .icon-gray svg:hover{
-        /* transform: scale(1.1); */
     }
     /* ----- header ----- */
     .navbar{
@@ -505,16 +523,17 @@ footer{
     .menu-logo{
         grid-row: 1/4;
     }
-    .menu-logo svg:hover{
-        fill-opacity: 0.6;
-    }
     .menu-secondList li a:hover{
-        color: #333;
+        color: var(--hvr-color);
         transition: 0.15s;
     }
     /* ----- footer ----- */
     .scrollTop:hover{
         transform: scale(1.15);
         transition: 0.5s;
+    }
+    .footer-menu li a:hover{
+        color: var(--hvr-color);
+        transition: var(--hvr-transition);
     }
 }

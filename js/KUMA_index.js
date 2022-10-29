@@ -151,7 +151,7 @@ $(function scroll(){
         });
 
         // 標籤顯示區塊名稱
-		$('#Show, #Intro, #Activity').each(function(){
+		$('#Show, #Intro, #Activity, #Footer').each(function(){
 			// let objTop = $(this).offset().top;
 			let objTop = getOffsetTop(this);
 			if (scrTop > objTop - winH + winH / 2){
