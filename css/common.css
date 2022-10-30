@@ -119,6 +119,7 @@
 /* ----- 通用設定 ----- */
 body{
     position: relative;
+    padding-top: calc(6% + 30px);
     font-size: 0;
     /* 去除各種間隙與 h1(logo) 文字 */
 }
@@ -530,6 +531,9 @@ footer{
         font-size: 30px;
     }
     /* ----- 通用設定 ----- */
+    body{
+        padding-top: 70px;
+    }
     svg:hover{
         fill: var(--hvr-fill);
         transition: var(--hvr-transition);
