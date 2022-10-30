@@ -107,7 +107,7 @@ figcaption span{
 
 /* ----- < 1023 ----- */
 @media screen and (max-width: 1023px){
-        /* ----- product ----- */
+    /* ----- product ----- */
     .series-name-lg{
         width: fit-content;
         font-family: 'NeverMind','Noto Sans TC';
