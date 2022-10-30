@@ -4,6 +4,9 @@
     max-width: 1500px;
     margin: auto;
 }
+.banner ul li{
+    display: none;
+}
 .banner-slogan{
     position: absolute;
     top: 20%;
@@ -84,10 +87,10 @@ figcaption span{
     font-weight: 300;
     color: #666;
 }
-.list-series{
+.list-series, .banner li{
     display: none;
 }
-#list-eraser.open, #list-correctionTape.open, #list-pencil.open, #list-graph.open{
+.series-eraser.open, .series-correctionTape.open, .series-pencil.open, .series-graph.open{
     display: block;
 }
 
@@ -95,7 +98,9 @@ figcaption span{
 
 /* ----- < 768 ----- */
 @media screen and (max-width: 767px){
-
+    .series-all-lg.open{
+        display: block;
+    }
 }
 
 /* ----- > 768 ----- */
@@ -106,6 +111,9 @@ figcaption span{
     }
     .product{
         margin: 0 auto 150px;
+    }
+    .series-all.open{
+        display: block;
     }
 }
 

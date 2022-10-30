@@ -81,22 +81,63 @@
 
     <main>
         <div id="Banner" class="banner clr-gray">
-            <div class="banner-slogan">
-                <img src="../pic/logo/KUMA_logo_font.svg" alt="KUMA_logo">
-                <span class="h4-style">青‧白‧黑三色，是一貫的高品質象徵</span>
-            </div>
-            <picture>
-                <source media="(min-width:1200px )" srcset="../pic/banner/KUMA-banner-eraser_xl.webp">
-                <source media="(min-width:1024px )" srcset="../pic/banner/KUMA-banner-eraser_l.webp">
-                <source media="(min-width:768px )" srcset="../pic/banner/KUMA-banner-eraser_m.webp">
-                <img src="../pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-eraser-banner">
-            </picture>
+            <ul>
+                <li class="series-all series-eraser open">
+                    <div class="banner-slogan">
+                        <img src="../pic/logo/KUMA_logo_font.svg" alt="KUMA_logo">
+                        <span class="h4-style">青‧白‧黑三色，是一貫的高品質象徵</span>
+                    </div>
+                    <picture>
+                        <source media="(min-width:1200px )" srcset="../pic/banner/KUMA-banner-eraser_xl.webp">
+                        <source media="(min-width:1024px )" srcset="../pic/banner/KUMA-banner-eraser_l.webp">
+                        <source media="(min-width:768px )" srcset="../pic/banner/KUMA-banner-eraser_m.webp">
+                        <img src="../pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-eraser-banner">
+                    </picture>
+                </li>
+                <li class="series-correctionTape">
+                    <div class="banner-slogan">
+                        <img src="../pic/logo/KUMA_logo_font.svg" alt="KUMA_logo">
+                        <span class="h4-style">兼具輕巧與穩固，讓您輕鬆使用直到最後一刻</span>
+                    </div>
+                    <picture>
+                        <source media="(min-width:1200px )" srcset="../pic/banner/KUMA-banner-correction_xl.webp">
+                        <source media="(min-width:1024px )" srcset="../pic/banner/KUMA-banner-eraser_l.webp">
+                        <source media="(min-width:768px )" srcset="../pic/banner/KUMA-banner-eraser_m.webp">
+                        <img src="../pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-correction-tape-banner">
+                    </picture>
+                </li>
+                <li class="series-pencil">
+                    <div class="banner-slogan">
+                        <img src="../pic/logo/KUMA_logo_font_fff.svg" alt="KUMA_logo">
+                        <span class="h4-style clr-white">順滑清晰的筆跡，掌握寫作風格的極致</span>
+                    </div>
+                    <picture>
+                        <source media="(min-width:1200px )" srcset="../pic/banner/KUMA-banner-pencil_xl.webp">
+                        <source media="(min-width:1024px )" srcset="../pic/banner/KUMA-banner-eraser_l.webp">
+                        <source media="(min-width:768px )" srcset="../pic/banner/KUMA-banner-eraser_m.webp">
+                        <img src="../pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-pencil-banner">
+                    </picture>
+                </li>
+                <li class="series-graph">
+                    <div class="banner-slogan">
+                        <img src="../pic/logo/KUMA_logo_font.svg" alt="KUMA_logo">
+                        <span class="h4-style">搭配 KUMA 橡皮擦</span><br>
+                        <span class="h4-style">輕鬆實現高精度的「書寫」與「擦除」</span>
+                    </div>
+                    <picture>
+                        <source media="(min-width:1200px )" srcset="../pic/banner/KUMA-banner-pen_xl.webp">
+                        <source media="(min-width:1024px )" srcset="../pic/banner/KUMA-banner-eraser_l.webp">
+                        <source media="(min-width:768px )" srcset="../pic/banner/KUMA-banner-eraser_m.webp">
+                        <img src="../pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-graph-banner">
+                    </picture>
+                </li>
+            </ul>
         </div>
         <div class="breadcrumb">
             <ol class="p-style clr-gray hvr-teal">
                 <li><a href="https://chubbyrabi.github.io/KUMA/">首頁</a></li>
                 <li><a href="https://chubbyrabi.github.io/KUMA/product">商品情報</a></li>
-                <li><a href="#" id="at">橡皮擦</a></li>
+                <li><a href="#" id="at">所有商品</a></li>
             </ol>
         </div>
 
@@ -104,12 +145,12 @@
             <aside class="product-class clr-gray">
                 <h2 class="h3-style">商品情報</h2>
                 <ul class="class-series h4-style hvr-teal hvr-05s">
-                    <li class="hvr-pointer" data-switch="#list-all" data-switch-lg="#list-all-lg">
+                    <li class="hvr-pointer" data-switch=".series-all" data-switch-lg=".series-all-lg">
                         <div class="series-name js-click">
                             <h3>所有商品</h3>
                         </div>
                     </li>
-                    <li class="hvr-pointer" data-switch="#list-eraser">
+                    <li class="hvr-pointer" data-switch=".series-eraser">
                         <div class="series-name js-click on">
                             <h3>橡皮擦</h3>
                             <div class="plus-minus"><span></span><span></span></div>
@@ -129,7 +170,7 @@
                             <li><a href="">E12</a></li>
                         </ul>
                     </li>
-                    <li class="hvr-pointer" data-switch="#list-correctionTape">
+                    <li class="hvr-pointer" data-switch=".series-correctionTape">
                         <div class="series-name js-click">
                             <h3>修正帶</h3>
                             <div class="plus-minus"><span></span><span></span></div>
@@ -149,7 +190,7 @@
                             <li><a href="">C12</a></li>
                         </ul>
                     </li>
-                    <li class="hvr-pointer" data-switch="#list-pencil">
+                    <li class="hvr-pointer" data-switch=".series-pencil">
                         <div class="series-name js-click">
                             <h3>鉛筆</h3>
                             <div class="plus-minus"><span></span><span></span></div>
@@ -163,7 +204,7 @@
                             <li><a href="">P06</a></li>
                         </ul>
                     </li>
-                    <li class="hvr-pointer" data-switch="#list-graph">
+                    <li class="hvr-pointer" data-switch=".series-graph">
                         <div class="series-name js-click">
                             <h3>自動鉛筆</h3>
                             <div class="plus-minus"><span></span><span></span></div>
@@ -180,7 +221,7 @@
                 </ul>
             </aside>
             <div class="product-list clr-gray hvr-05s hvr-scale11">
-                <div id="list-all" class="list-series">
+                <div class="list-series series-all">
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -357,8 +398,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-all-lg" class="list-series">
-                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch="#list-eraser">Eraser <span>橡皮擦</span></div>
+                <div class="list-series series-all-lg">
+                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch=".series-eraser">Eraser <span>橡皮擦</span></div>
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -407,7 +448,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch="#list-correctionTape">Correction Tape <span>修正帶</span></div>
+                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch=".series-correctionTape">Correction Tape <span>修正帶</span></div>
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -456,7 +497,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch="#list-pencil">Pencil <span>鉛筆</span></div>
+                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch=".series-pencil">Pencil <span>鉛筆</span></div>
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -505,7 +546,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch="#list-graph">Graph <span>自動鉛筆</span></div>
+                    <div class="series-name-lg hvr-pointer js-elevator" data-position="#Banner" data-switch=".series-graph">Graph <span>自動鉛筆</span></div>
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -544,7 +585,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-eraser" class="list-series open">
+                <div class="list-series series-eraser open">
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -686,7 +727,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-correctionTape" class="list-series">
+                <div class="list-series series-correctionTape">
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -828,7 +869,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-pencil" class="list-series">
+                <div class="list-series series-pencil">
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">
@@ -901,7 +942,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="list-graph" class="list-series">
+                <div class="list-series series-graph">
                     <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
                         <li class="col">
                             <a href="#" class="product-item">

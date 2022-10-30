@@ -32,7 +32,7 @@ $(function aside(){
         $('.class-series>li').not(this).find('.series-name').removeClass('on');
 
         // 更換商品列表(圖片)
-        $('.list-series').removeClass('open');
+        $('.list-series, .banner li').removeClass('open');
         let list = $(this).attr('data-switch');
         $(list).addClass('open');
     });
@@ -43,7 +43,7 @@ $(function aside(){
         $(this).find('span').clone().appendTo('#at');
 
         // 更換商品列表(圖片)
-        $('.list-series').removeClass('open');
+        $('.list-series, .banner li').removeClass('open');
         let list = $(this).attr('data-switch');
         $(list).addClass('open');
     });
