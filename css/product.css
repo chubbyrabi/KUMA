@@ -106,10 +106,8 @@ figcaption span{
 }
 
 /* ----- < 1023 ----- */
-@media screen and (max-width: 1024px){
-    #list-all-lg.open{
-        display: block;
-    }
+@media screen and (max-width: 1023px){
+        /* ----- product ----- */
     .series-name-lg{
         width: fit-content;
         font-family: 'NeverMind','Noto Sans TC';
@@ -128,9 +126,6 @@ figcaption span{
 /* ----- > 1024 ----- */
 @media screen and (min-width: 1024px){
     /* ----- product ----- */
-    #list-all.open{
-        display: block;
-    }
     .product{
         margin: 0 auto 200px;
     }
