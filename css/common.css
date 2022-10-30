@@ -392,7 +392,7 @@ footer{
 .footer-search input{
     padding: 5px;
     border: none;
-    border-bottom: 1px solid hsla(0, 0, 20%, .5);
+    border-radius: 3px;
     background-color: #66CED6;
     opacity: 0.3;
 }
