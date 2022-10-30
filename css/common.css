@@ -100,11 +100,23 @@
     --hvr-fill:  #B3E6EB;
     --hvr-bgd:   #B3E6EB;
 }
-.hvr-ts03{
+.hvr-op06{
+    --hvr-opacity: 0.6;
+}
+.hvr-1s{
+    --hvr-transition: 1s;
+}
+.hvr-03s{
     --hvr-transition: 0.3s;
+}
+.hvr-015s{
+    --hvr-transition: 0.15s;
 }
 .hvr-scale11{
     --hvr-scale: scale(1.1);
+}
+.hvr-scale12{
+    --hvr-scale: scale(1.2);
 }
 .hvr-pointer{
     cursor: pointer;
@@ -299,8 +311,8 @@ header.js-hd-shadow{
 .menu-secondList li{
     display: inline-block;
     margin: 7px;
-    opacity: 0.6;
-    transition: 0.15s;
+    opacity: var(--hvr-opacity);
+    transition: var(--hvr-transition);
 }
 
 
@@ -309,6 +321,9 @@ header.js-hd-shadow{
 footer{
     position: relative;
     background-color: #00ADBB;
+}
+.footer p{
+    font-weight: 400;
 }
 
 /* ----- scrollTop ----- */
@@ -348,87 +363,123 @@ footer{
     white-space: nowrap;
     color: #333;
     font-size: 3vw;
-    bottom: 1.5vw;
+    bottom: 1vw;
 }
 
 /* ----- footer-area ----- */
 .footer-area{
     margin: 150px auto 0;
     max-width: 1380px;
-    padding: 100px 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
+    padding: 9% 6.5%;
 }
-.footer-icon, .footer-info{
-    display: flex;
-    flex-direction: column;
+.footer-icon ul, .footer-info ul, .footer-icon form{
+    margin: 20px 0;
 }
-.footer-icon ul, .footer-info ul{
-    flex-grow: 1;
+
+/* ----- footer-icon ----- */
+.footer-icon{
+    flex-shrink: 0;
 }
-.footer-info li+li, .footer-info div+div{
-    margin-top: 5px;
-}
-.footer-logo a{
-    display: inline-block;
-    width: fit-content;
+.footer-logo{
     width: 160px;
-    fill: #333;
-    margin-bottom: 20px;
-}
-.copyright{
-    margin-top: 15px;
-}
-.footer-menu li+li{
-    margin-top: 20px;
-}
-.footer-menu li a{
-    transition: var(--hvr-transition);
-}
-.copyright, .footer-info div{
-    font-weight: 400;
-}
-.footer-info ul li:first-child{
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.footer-info a:hover{
-    opacity: 0.6;
 }
 .icon-search{
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
+    width: 28px;
+    height: 28px;
     margin-right: 5px;
     border: none;
     background: none;
     vertical-align: bottom;
 }
 .icon-search svg{
-    margin: 3px 0 0 -6px;
+    margin-left: -5px;
     height: 100%;
 }
-.footer-search{
+.footer-search input{
     padding: 5px;
     border: none;
-    -webkit-appearance: none;
     border-bottom: 1px solid hsla(0, 0, 20%, .5);
     background-color: #66CED6;
     opacity: 0.3;
 }
-.footer-search:focus{
+.footer-search input:focus{
     outline: 0;
     opacity: 1;
 }
-.footer-search::placeholder{
+.footer-search input::placeholder{
     color: #333;
 }
-.footer-search::-ms-clear{
+/* 沒作用，待修改 */
+.footer-search input::-ms-clear{
     display: none;
 }
 
+/* ----- footer-menu ----- */
+.footer-menu li{
+    position: relative;
+}
+.footer-menu li+li{
+    margin-top: 20px;
+}
+.footer-menu li:hover::before{
+    position: absolute;
+    top: -12px;
+    left: -22px;
+    content: '';
+    background-image: url("../pic/deco/shock-333-40deg_L.svg");
+    width: 32px;
+    height: 25px;
+}
+
+/* ----- footer-info ----- */
+.footer-info p:first-child{
+    font-weight: 500;
+}
+.footer-info li+li, .footer-info p{
+    margin-top: 5px;
+}
+
+
+
+/* ----- 480 < ----- */
+@media screen and (max-width: 479px){
+    .footer-search, .footer-icon .copyright{
+        display: none;
+    }
+    .footer-info .copyright{
+        margin-top: 20px;
+    }
+}
+
+/* ----- >= 480 ----- */
+@media screen and (min-width: 480px){
+    .scrollTop span{
+        font-size: 2.5vw;
+    }
+    .footer-area{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+    .footer-icon, .footer-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-icon ul, .footer-info ul{
+        flex-grow: 1;
+    }
+    .footer-info .copyright{
+        display: none;
+    }
+}
+
+/* ----- 768 < ----- */
+@media screen and (max-width: 767px){
+    .footer-info{
+        margin-top: 40px;
+    }
+}
 
 /* ----- >= 768 ----- */
 @media screen and (min-width: 768px){
@@ -452,6 +503,12 @@ footer{
     .scrollTop span{
         font-size: 16px;
         bottom: 10px;
+    }
+    .footer-area{
+        flex-wrap: nowrap;
+    }
+    .footer-menu{
+        margin: 0 30px;
     }
 }
 
@@ -559,15 +616,17 @@ footer{
     }
     .menu-secondList li a:hover{
         color: var(--hvr-color);
-        transition: 0.15s;
+        transition: var(--hvr-transition);
     }
     /* ----- footer ----- */
     .scrollTop:hover{
         transform: scale(1.15);
         transition: 0.5s;
     }
-    .footer-menu li a:hover{
-        color: var(--hvr-color);
-        transition: var(--hvr-transition);
+    .footer-area{
+        padding: 100px 50px;
+    }
+    .footer-info a:hover{
+        opacity: var(--hvr-opacity);
     }
 }
