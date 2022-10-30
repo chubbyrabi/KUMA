@@ -45,7 +45,7 @@
 .product-class{
     display: none;
 }
-.product-class h2, .product-class h3, .product-class a{
+.product-class{
     color: var(--clr-color);
 }
 .series-list{
