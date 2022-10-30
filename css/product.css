@@ -6,14 +6,17 @@
 }
 .banner-slogan{
     position: absolute;
-    width: 150px;
-    left: 10%;
     top: 20%;
+    left: 10%;
+    margin-right: 10%;
+}
+.banner-slogan img{
+    display: block;
+    width: 150px;
+    margin-bottom: 20px;
 }
 .banner-slogan span{
     font-weight: 400;
-    line-height: 4em;
-    white-space: nowrap;
     color: var(--clr-color);
 }
 
