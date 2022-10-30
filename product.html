@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="icon" href="pic/logo/KUMA_icon.ico" type="image/x-icon">
 </head>
 <style>
@@ -52,7 +53,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li><a href="https://chubbyrabi.github.io/KUMA/product.html">PRODUCT <span>商品情報</span></a>
+                    <li><a href="https://chubbyrabi.github.io/KUMA/product">PRODUCT <span>商品情報</span></a>
                         <ul class="menu-secondList h4-style clr-white hvr-gray hvr-op06 hvr-015s">
                             <li><a href="#" title="coming soon">．橡皮擦</a></li>
                             <li><a href="#" title="coming soon">．修正帶</a></li>
@@ -76,7 +77,904 @@
         </div>
     </header>
 
+    <main>
+        <div id="Banner" class="banner">
+            <div class="banner-slogan">
+                <img src="pic/logo/KUMA_logo_font.svg" alt="KUMA_logo">
+                <span class="h4-style">當你有需要，我們一直都在</span>
+            </div>
+            <picture>
+                <source media="(min-width:1200px )" srcset="pic/banner/KUMA-banner-eraser_xl.webp">
+                <source media="(min-width:1024px )" srcset="pic/banner/KUMA-banner-eraser_l.webp">
+                <source media="(min-width:768px )" srcset="pic/banner/KUMA-banner-eraser_m.webp">
+                <img src="pic/banner/KUMA-banner-eraser_s.webp" alt="KUMA-eraser-banner">
+            </picture>
+        </div>
+        <div class="breadcrumb">
+            <ol class="p-style clr-gray hvr-teal">
+                <li><a href="https://chubbyrabi.github.io/KUMA/">首頁</a></li>
+                <li><a href="https://chubbyrabi.github.io/KUMA/product">商品情報</a></li>
+                <li><a href="#" id="at">所有商品</a></li>
+            </ol>
+        </div>
 
+        <div class="product">
+            <aside class="product-class clr-gray">
+                <h2 class="h3-style">商品情報</h2>
+                <ul class="class-series h4-style hvr-teal hvr-05s">
+                    <li class="hvr-pointer" data-switch="#list-all" data-switch-lg="#list-all-lg">
+                        <div class="series-name js-click">
+                            <h3>所有商品</h3>
+                        </div>
+                    </li>
+                    <li class="hvr-pointer" data-switch="#list-eraser">
+                        <div class="series-name js-click">
+                            <h3>橡皮擦</h3>
+                            <div class="plus-minus"><span></span><span></span></div>
+                        </div>
+                        <ul class="series-list p-style">
+                            <li><a href="">E01</a></li>
+                            <li><a href="">E02</a></li>
+                            <li><a href="">E03</a></li>
+                            <li><a href="">E04</a></li>
+                            <li><a href="">E05</a></li>
+                            <li><a href="">E06</a></li>
+                            <li><a href="">E07</a></li>
+                            <li><a href="">E08</a></li>
+                            <li><a href="">E09</a></li>
+                            <li><a href="">E10</a></li>
+                            <li><a href="">E11</a></li>
+                            <li><a href="">E12</a></li>
+                        </ul>
+                    </li>
+                    <li class="hvr-pointer" data-switch="#list-correctionTape">
+                        <div class="series-name js-click">
+                            <h3>修正帶</h3>
+                            <div class="plus-minus"><span></span><span></span></div>
+                        </div>
+                        <ul class="series-list p-style">
+                            <li><a href="">C01</a></li>
+                            <li><a href="">C02</a></li>
+                            <li><a href="">C03</a></li>
+                            <li><a href="">C04</a></li>
+                            <li><a href="">C05</a></li>
+                            <li><a href="">C06</a></li>
+                            <li><a href="">C07</a></li>
+                            <li><a href="">C08</a></li>
+                            <li><a href="">C09</a></li>
+                            <li><a href="">C10</a></li>
+                            <li><a href="">C11</a></li>
+                            <li><a href="">C12</a></li>
+                        </ul>
+                    </li>
+                    <li class="hvr-pointer" data-switch="#list-pencil">
+                        <div class="series-name js-click">
+                            <h3>鉛筆</h3>
+                            <div class="plus-minus"><span></span><span></span></div>
+                        </div>
+                        <ul class="series-list p-style">
+                            <li><a href="">P01</a></li>
+                            <li><a href="">P02</a></li>
+                            <li><a href="">P03</a></li>
+                            <li><a href="">P04</a></li>
+                            <li><a href="">P05</a></li>
+                            <li><a href="">P06</a></li>
+                        </ul>
+                    </li>
+                    <li class="hvr-pointer" data-switch="#list-graph">
+                        <div class="series-name js-click">
+                            <h3>自動鉛筆</h3>
+                            <div class="plus-minus"><span></span><span></span></div>
+                        </div>
+                        <ul class="series-list p-style">
+                            <li><a href="">G01</a></li>
+                            <li><a href="">G02</a></li>
+                            <li><a href="">G03</a></li>
+                            <li><a href="">G04</a></li>
+                            <li><a href="">G05</a></li>
+                            <li><a href="">G06</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <div class="product-list clr-gray hvr-05s hvr-scale11">
+                <div id="list-all" class="list-series open">
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_01.webp" alt="KUMA-pen-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>自動鉛筆-G01</p>
+                                        <span>No.G01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_02.webp" alt="KUMA-pen-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-G02</p>
+                                        <span>No.G02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/all_product.webp" alt="KUMA-all-pro-
+                                    01" width="200px">
+                                    <figcaption>
+                                        <p>品名-A01</p>
+                                        <span>No.A01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-all-lg" class="list-series open">
+                    <div class="series-name-lg hvr-pointer" data-switch="#list-eraser">Eraser <span>橡皮擦</span></div>
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="series-name-lg hvr-pointer" data-switch="#list-correctionTape">Correction Tape <span>修正帶</span></div>
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="series-name-lg hvr-pointer" data-switch="#list-pencil">Pencil <span>鉛筆</span></div>
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="series-name-lg hvr-pointer" data-switch="#list-graph">Graph <span>自動鉛筆</span></div>
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_01.webp" alt="KUMA-pen-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>自動鉛筆-G01</p>
+                                        <span>No.G01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_02.webp" alt="KUMA-pen-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-G02</p>
+                                        <span>No.G02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/all_product.webp" alt="KUMA-all-pro-
+                                    01" width="200px">
+                                    <figcaption>
+                                        <p>品名-A01</p>
+                                        <span>No.A01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-eraser" class="list-series">
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_main_pro_01.webp" alt="KUMA-eraser-main-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>標準型橡皮擦</p>
+                                        <span>KUMA</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/eraser/eraser_black_pro_01.webp" alt="KUMA-eraser-black-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>極黑型橡皮擦</p>
+                                        <span>KUMA(BLACK)</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-correctionTape" class="list-series">
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_01.webp" alt="KUMA-correction-tape-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C01</p>
+                                        <span>No.C01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/correction-tape/correction-tape_pro_02.webp" alt="KUMA-correction-type-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>修正帶-C02</p>
+                                        <span>No.C02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-pencil" class="list-series">
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_01.webp" alt="KUMA-pencil-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P01</p>
+                                        <span>No.P01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/pencil/pencil_pro_02.webp" alt="KUMA-pencil-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-P02</p>
+                                        <span>No.P02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="list-graph" class="list-series">
+                    <ul class="row row-clos-2 row-clos-md-3 row-clos-lg-4 row-clos-xl-5">
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_01.webp" alt="KUMA-pen-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>自動鉛筆-G01</p>
+                                        <span>No.G01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_02.webp" alt="KUMA-pen-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-G02</p>
+                                        <span>No.G02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_01.webp" alt="KUMA-pen-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>自動鉛筆-G01</p>
+                                        <span>No.G01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_02.webp" alt="KUMA-pen-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-G02</p>
+                                        <span>No.G02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_01.webp" alt="KUMA-pen-pro-01" width="200px">
+                                    <figcaption>
+                                        <p>自動鉛筆-G01</p>
+                                        <span>No.G01</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="col">
+                            <a href="#" class="product-item">
+                                <figure>
+                                    <img src="pic/product/graph/pen_pro_02.webp" alt="KUMA-pen-pro-
+                                    02" width="200px">
+                                    <figcaption>
+                                        <p>鉛筆-G02</p>
+                                        <span>No.G02</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer id="Footer" class="footer">
         <div class="scrollTop-hoverBox">
@@ -166,6 +1064,6 @@
 
     <script type="text/javascript" src="js/jquery-3.6.1.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/KUMA_product.js"></script>
+    <script type="text/javascript" src="js/product.js"></script>
 </body>
 </html>

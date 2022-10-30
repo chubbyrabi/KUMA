@@ -1,526 +1,240 @@
-/* ----- show ----- */
-.show{
+/* ----- banner ----- */
+.banner{
     position: relative;
-    overflow: hidden;
-    background-color: #fff;
+    max-width: 1500px;
+    margin: auto;
 }
-.show::before{
-    content: '';
+.banner-slogan{
     position: absolute;
-    width: 100%;
-    height: 60vh;
-    min-height: 350px;
-    top: 20vh;
-    background-color: #B3E6EB;
+    width: 150px;
+    left: 10%;
+    top: 20%;
 }
-/* ----- 日文裝飾字 定位 ----- */
-.publicity-title{
-    writing-mode: vertical-rl;
-    position: absolute;
-    top: calc(4vw + 40px);
-    left: calc(100vw - 104px - 13%);
-    z-index: 1;
-    /* 容器寬 104px */
+.banner-slogan span{
+    font-weight: 400;
+    line-height: 4em;
+    white-space: nowrap;
 }
-.publicity-title span{
-    font-family: 'Noto Sans TC';
-    letter-spacing: 0.15em;
-    color: #333;
+
+
+
+/* ----- breadcrumb ----- */
+.breadcrumb{
+    padding: 10px;
+    max-width: 1380px;
+    margin: auto;
 }
-.publicity-title span:not(:nth-of-type(3)){
-    font-size: 16px;
+.breadcrumb li{
+    display: inline-block;
+}
+.breadcrumb li:last-child a{
     font-weight: 500;
-    line-height: 2em;
 }
-.publicity-title span:nth-of-type(3){
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.7em;
-}
-/* ----- css 橡皮擦動畫 輪播 ----- */
-/* ----- 待整理：與輪播點點一起改寫成 JS 迴圈控制數量 ----- */
-.show-animate{
-    position: relative;
-    box-sizing: border-box;
-    width: 4200px;
-    height: 60vh;
-    min-height: 350px;
-    margin-top: 20vh;
-    padding-top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.show-animate ul{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: eraser-move 14s linear infinite;
-}
-.show-animate ul li{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-    margin: 0 40px;
-}
-.eraser-list li img{
-    /* JS定位 */
-    position: relative;
-    bottom: 0;
-    height: 250px;
-    width: auto;
-    animation: eraser-rotate 2s  ease infinite;
-}
-.shadow-list li img{
-    height: 62.5px;
-    width: auto;
-    animation: shadow-rotate 2s  ease infinite;
-}
-/* ----- JS 橡皮擦動畫 shock ----- */
-.js-shock.eraser::after{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-    background-image: url("../pic/deco/shock-333.svg");
-    background-position: center;
-    background-size: contain;
-    width: 50px;
-    height: 20px;
-}
-.js-shock.eraser.tallest::after{ top: -40px; }
-.js-shock.eraser.tall::after   { top: -30px; }
-.js-shock.eraser.normal::after { top:  -5px; }
-.js-shock.eraser.short::after  { top:  40px; }
-/* ----- show-tools ----- */
-.show-tools{
-    height: 12vh;
-    margin: auto;
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.scrollDown{
-    width: 40px;
-    animation: scrollDown-jump 2.5s ease-in-out 1s infinite;
-}
-.scrollDown:hover::before{
-    position: absolute;
-    top: 0;
-    left: 100%;
-    content: 'SCROLL DOWN';
-    font-family: 'NeverMind';
-    font-size: 14px;
-    font-weight: 900;
-    line-height: 1.2em;
-    color: #333;
-}
-#move-line-box{
-    padding: 30px;
-    position: relative;
-}
-.line-box{
-    padding: 30px 0px;
-    max-width: 800px;
-    margin: auto;
-}
-.long-line{
-    margin: 20px auto;
-    border-bottom: 1px solid #B3B3B3;
-}
-.short-line{
-    margin: auto;
-    width: 30%;
-    max-width: 200px;
-    height: 3px;
-    background-color: #00ADBB;
+.breadcrumb li:not(:last-child)::after{
+    content: "/ ";
+    padding: 5px;
 }
 
 
 
-/* ----- intro ----- */
-.intro{
-    overflow: hidden;
-    padding: 20px 30px 50px;
-    background-color: #fff;
-    border-bottom: 1px solid #B3B3B3;
+/* ----- product ----- */
+.product{
+    max-width: 1400px;
+    margin: 0 auto 100px;
 }
-.intro-title, .intro-txt{
-    max-width: 700px;
-    margin: auto;
-    text-align: justify;
-}.intro-title{
-    padding: 20px 0;
+.product-class{
+    display: none;
 }
-.intro-txt p{
-    padding: 10px 0;
+.product-class h2, .product-class h3, .product-class a{
+    color: var(--clr-color);
 }
-.intro-title span{
-    font-family: 'Noto Sans TC';
+.series-list{
+    display: none;
 }
-.intro-pic{
-    margin: auto;
-    padding-top: 3%;
-    max-width: 900px;
-}
-
-
-
-/* ----- activity ----- */
-.activity{
-    position: relative;
-    padding: 0 2.5%;
-}
-.activity-title h2{
-    margin: auto;
-    padding: 50px 0;
-    font-family: 'Noto Sans TC';
-    font-size: 50px;
-    font-weight: 900;
-    letter-spacing: 0;
-    line-height: 1.1em;
-    text-align: center;
-    color: #333;
-}
-.activity-title span{
-    font-size: 1.2em;
-    color: #00ADBB;
-}
-.activity-title span::after{
-    position: relative;
-    top: -0.5em;
-    content: 'th';
-    font-size: 0.6em;
-}
-.activity-content{
-    overflow: hidden;
-    text-align: center;
-}
-.content-pic, .content-info{
-    box-sizing: border-box;
-    margin: 20px;
-    width: 60%;
-    max-width: 280px;
-    display: inline-block;
-    vertical-align: middle;
-}
-.content-pic{
-    padding: 4%;
-    background-color: #00ADBB;
-}
-.content-info div:nth-child(1){
-    padding: 0 5%;
-}
-.content-info div:nth-child(4){
-    padding: 0 15%;
-}
-.content-info div:not(:last-child){
-    padding-bottom: 8.8%;
-}
-.activity>span, .activity>button{
+.product-item{
     display: block;
-    margin: auto;
-    text-align: center;
+    box-sizing: border-box;
+    margin: 15px;
+    overflow: hidden;
 }
-.activity>span{
-    font-size: 24px;
+figure img{
+    transform: scale(1);
+    transition: var(--hvr-transition);
+    background-color: #F6F8FB;
 }
-.activity-bgd{
-    position: fixed;
-    width: 100%;
-    bottom: -5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
+figcaption{
+    position: relative;
+    padding: 5px 0;
+    font-family: 'NeverMind','Noto Sans TC';
+    color: var(--clr-color)
+    background-color: white;
 }
-.activity-bgd img{
-    min-height: 350px;
-    object-fit: cover;
+figcaption p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
 }
-.activity-decoStr{
-    padding: 30px;
+figcaption span{
+    font-size: 12px;
+    font-weight: 300;
+    color: #666;
+}
+.list-series{
+    display: none;
+}
+#list-eraser.open, #list-correctionTape.open, #list-pencil.open, #list-graph.open{
+    display: block;
 }
 
 
 
 /* ----- < 768 ----- */
 @media screen and (max-width: 767px){
-    /* ----- 50 周年圖片動畫 向上浮出 ----- */
-    .content-pic.in, .content-info.in{
-        transform: translateY(0%);
-        opacity: 1;
-        transition: 1s;
-    }
-    .content-pic, .content-pic.out, .content-info, .content-info.out{
-        transform: translateY(25%);
-        opacity: 0;
-        transition: 1s;
-    }
+
 }
-
-
 
 /* ----- > 768 ----- */
 @media screen and (min-width: 768px){
-    /* -----  JS 橡皮擦動畫 叫聲 ----- */
-    .js-yell{
-        display: none;
-        position: absolute;
-        width: 120px;
-        bottom: -60px;
-        font-family: 'Noto Sans TC';
-        font-size: 20px;
-        font-weight: 900;
-        white-space: nowrap;
-        color: #333;
-        animation: eraser-on-click 1.5s forwards;
+    .banner-slogan{
+        top: 50%;
+        transform: translateY(-50%);
     }
-    /* ----- 輪播點點 > 待整理：與橡皮擦動畫一起改寫成 JS 控制 ----- */
-    .carousel-dot{
-        margin-left: 122px;
-    }
-    .carousel-dot span{
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        margin: 0 10px;
-        border-radius: 50%;
-        background-color: #999999;
-    }
-    .content-pic{
-        padding: 30px;
-    }
-    .content-info div:nth-child(1){
-        padding-bottom: 15px;
-    }
-    .content-info div:nth-child(4){
-        padding: 0 40px;
-    }
-    .content-info div:not(:last-child){
-        padding-bottom: 24px;
-    }
-    .activity-title h2{
-        font-size: 60px;
-    }
-    /* ----- 50 周年圖片動畫 左右進場 ----- */
-    .content-pic.in, .content-info.in{
-        transform: translateX(0);
-        opacity: 1;
-        transition: 1s 0.2s;
-    }
-    .content-pic, .content-pic.out{
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: 1s;
-    }
-    .content-info, .content-info.out{
-        transform: translateX(100%);
-        opacity: 0;
-        transition: 1s;
-    }
-    .activity-bgd{
-        bottom: 0;
-    }
-    .activity-bgd img{
-        transform: scale(1.3);
-    }
-    /* ----- scrollTop 動畫 hover 縮放 ----- */
-    .scrollTop-hoverBox{
-        padding: 20px 20px 0;
-        top: -100px;
-        height: 80px;
-    }
-    .scrollTop{
-        width: 100%;
-        height: 100%;
-        transform: scale(1);
-        transition: 0.5s;
-    }
-    .scrollTop img{
-        top: 15px;
-        left: calc(50% - 25px);
-        width: 50px;
-    }
-    .scrollTop span{
-        font-size: 16px;
-        bottom: 10px;
+    .product{
+        margin: 0 auto 150px;
     }
 }
 
-
-
-/* ----- >= 1200 ----- */
-@media screen and (min-width: 1200px){
-    /* ----- show ----- */
-    .publicity-title{
-        top: 90px;
+/* ----- < 1023 ----- */
+@media screen and (max-width: 1024px){
+    #list-all-lg.open{
+        display: block;
     }
-    .show-tools{
-        max-width: 1380px;
-        height: 85px;
+    .series-name-lg{
+        width: fit-content;
+        font-family: 'NeverMind','Noto Sans TC';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0em;
+        text-align: center;
+        color: var(--clr-color);
+        margin: 20px auto 5px;
+        padding: 5px;
+        border-bottom: 2px solid #00ADBB;
     }
-    #move-line{
-        max-width: 100px;
+}
+
+/* ----- > 1024 ----- */
+@media screen and (min-width: 1024px){
+    /* ----- product ----- */
+    #list-all.open{
+        display: block;
+    }
+    .product{
+        margin: 0 auto 200px;
+    }
+    .product-list{
+        display: inline-block;
+        vertical-align: top;
+        width: 77.5%;
+    }
+    .product-class{
+        display: inline-block;
+        vertical-align: top;
+        width: calc(22.5% - 65px);
+        margin: 15px 50px 15px 15px;
+    }
+    .product-class h2{
+        margin: 15px 0;
+    }
+    .class-series>li{
+        border-top: 1px solid #B3B3B3;
+    }
+    .class-series>li:last-child{
+        border-bottom: 1px solid #B3B3B3;
+    }
+    .series-name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 15px;
+    }
+    .class-series>li:not(:first-child) .series-name.on{
+        color: var(--hvr-color);
+        background-color: #F2F2F2;
+    }
+    .series-list{
+        padding: 15px 0;
+    }
+    .series-list li{
+        margin: 0 15px;
+    }
+    .plus-minus{
+        position: relative;
+        width: 13px;
+        height: 13px;
+    }
+    .plus-minus span{
         position: absolute;
+        top: 6px;
+        width: 13px;
+        height: 1.4px;
+        background-color: #00ADBB;
+        transition: 0.5s;
+    }
+    .plus-minus span:first-child{
+        transform: rotate(0deg);
+    }
+    .js-click.on .plus-minus span:first-child{
+        transform: rotate(180deg);
+        transition: var(--hvr-transition);
+    }
+    .plus-minus span:last-child{
+        transform: rotate(90deg);
+    }
+    .js-click.on .plus-minus span:last-child{
+        transform: rotate(-180deg);
+        transition: var(--hvr-transition);
+    }
+}
+
+/* ----- > 1200 ----- */
+@media screen and (min-width: 1200px){
+    /* ----- 通用設定 ----- */
+    /* ----- banner ----- */
+    .breadcrumb a:hover{
+        color: var(--hvr-color);
+    }
+    /* ----- product ----- */
+    figure img:hover{
+        transform: var(--hvr-scale);
+        transition: var(--hvr-transition);
+    }
+    .series-name:hover{
+        color: var(--hvr-color);
+        background-color: #F2F2F2;
+    }
+    .series-list li:hover a{
+        font-weight: 500;
+        color: var(--hvr-color);
+        border-bottom: 1px solid #B3B3B3;
         transition: 0.15s;
     }
-    /* ----- block-tag ----- */
-    #block-tag{
-        position: fixed;
-        top: calc(50% - 100px);
-        transform: translateY(-50%);
-        /* ----- 打開網頁會旋轉 ----- */
-        transform: rotate(180deg);
-        /* transform: rotateX(180deg); */
-        /* ----- 打開網頁旋轉 ----- */
-        width: 10px;
-        height: 200px;
-        background-color: #00ADBB;
-        font-family: 'Noto Sans TC';
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.8em;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        writing-mode: vertical-rl;
-        text-align: center;
-        color: transparent;
-        transition: 0.5s;
-        z-index: 1;
-    }
-    #block-tag:hover{
-        color: #fff;
-        width: 30px;
-        transition: 0.3s;
-    }
 }
 
-
-
+/* ----- > 1400 ----- */
 @media screen and (min-width: 1400px){
-    /* ----- 日文裝飾字 1400 定位 ----- */
-    .publicity-title{
-        left: calc(50% + 700px - 285px);
+    /* ----- banner ----- */
+    .banner-slogan{
+        left: calc(50% - 560px)
     }
-}
-
-
-
-/* ----- scrollDown 彈跳動畫 ----- */
-@keyframes scrollDown-jump{
-    0%   { transform: translateY(10px); }
-    50%  { transform: translateY(-10px);}
-    100% { transform: translateY(10px); }
-}
-/* ----- css 橡皮擦動畫 移動 ----- */
-/* ----- 待整理：與輪播點點一起改寫成 JS 迴圈控制數量 ----- */
-@keyframes eraser-move{
-    3.57%  { left: 50%; }
-    6.42%  { left: calc(50% - 195px);  }
-    7.85%  { left: calc(50% - 200px);  }
-
-    17.85% { left: calc(50% - 200px);  }
-    20.71% { left: calc(50% - 395px);  }
-    22.14% { left: calc(50% - 400px);  }
-
-    32.14% { left: calc(50% - 400px);  }
-    35%    { left: calc(50% - 595px);  }
-    36.42% { left: calc(50% - 600px);  }
-
-    46.42% { left: calc(50% - 600px);  }
-    49.28% { left: calc(50% - 795px);  }
-    50.71% { left: calc(50% - 800px);  }
-
-    60.71% { left: calc(50% - 800px);  }
-    63.57% { left: calc(50% - 995px);  }
-    65%    { left: calc(50% - 1000px); }
-
-    75%    { left: calc(50% - 1000px); }
-    77.85% { left: calc(50% - 1195px); }
-    79.28% { left: calc(50% - 1200px); }
-
-    89.28% { left: calc(50% - 1200px); }
-    92.14% { left: calc(50% - 1395px); }
-    93.57% { left: calc(50% - 1400px); }
-    100%   { left: calc(50% - 1400px); }
-}
-/* ----- css 橡皮擦動畫 旋轉 ----- */
-@keyframes eraser-rotate{
-    0%   { transform: rotate(0deg);
-           transform-origin: right bottom;
+    /* ----- product ----- */
+    .product-class{
+        width: 250px;
     }
-    25%  { transform: rotate(10deg);
-           transform-origin: right bottom;
+    .product-list{
+        width: calc(100% - 315px);
     }
-    45%  { transform: rotate(-6deg);
-           transform-origin: left bottom;
-    }
-    55%  { transform: rotate(3deg);
-           transform-origin: right bottom;
-    }
-    65%  { transform: rotate(0deg);
-           transform-origin: right bottom;
-    }
-}
-/* ----- css 橡皮擦動畫 影子旋轉 ----- */
-@keyframes shadow-rotate{
-    0%  { transform: rotate(0deg);
-          transform-origin: right top;
-    }
-    25% { transform: rotate(-10deg);
-          transform-origin: right top;
-    }
-    45% { transform: rotate(6deg);
-          transform-origin: left top;
-    }
-    55% { transform: rotate(-3deg);
-          transform-origin: right top;
-    }
-    65% { transform: rotate(0deg);
-          transform-origin: right top;
-    }
-}
-/* ----- css 橡皮擦動畫 叫聲 ----- */
-@keyframes eraser-on-click{
-    0%   { transform: scale(0.8);}
-    100% { transform: scale(1.2);}
-}
-
-
-
-/* ----- intro 內容動畫 逐個浮出 ----- */
-.intro>div:not(:last-child).in{
-    transform: translateY(0%);
-    opacity: 1;
-    transition: 2s;
-}
-.intro>div:not(:last-child){
-    transform: translateY(25%);
-    opacity: 0;
-    transition: 1s;
-}
-/* ----- HBD 標題動畫 彈出 ----- */
-.activity-title.in{
-    transform: scale(1);
-    transition: 0.5s;
-}
-.activity-title, .activity-title.out{
-    transform: scale(0);
-    transition: 0.5s;
-}
-/* ----- "讓我們開始吧" 文字動畫 向上浮出 ----- */
-.activity-decoStr.in{
-    transform: translateY(0%);
-    opacity: 1;
-    transition: 1s;
-}
-.activity-decoStr, .activity-decoStr.out{
-    transform: translateY(25%);
-    opacity: 0;
-    transition: 1s;
 }

@@ -49,27 +49,22 @@
 .clr-gray{
     --clr-color:#333;
     --clr-fill: #333;
-    --clr-bgd:  #333;
 }
 .clr-white{
     --clr-color:#fff;
     --clr-fill: #fff;
-    --clr-bgd:  #fff;
 }
 .clr-teal{
     --clr-color:#00ADBB;
     --clr-fill: #00ADBB;
-    --clr-bgd:  #00ADBB;
 }
 .clr-teal60{
     --clr-color:#66CED6;
     --clr-fill: #66CED6;
-    --clr-bgd:  #66CED6;
 }
 .clr-teal30{
     --clr-color:#B3E6EB;
     --clr-fill: #B3E6EB;
-    --clr-bgd:  #B3E6EB;
 }
 
 
@@ -78,33 +73,31 @@
 .hvr-gray{
     --hvr-color: #333;
     --hvr-fill:  #333;
-    --hvr-bgd:   #333;
 }
 .hvr-white{
     --hvr-color: #fff;
     --hvr-fill:  #fff;
-    --hvr-bgd:   #fff;
 }
 .hvr-teal{
     --hvr-color: #00ADBB;
     --hvr-fill:  #00ADBB;
-    --hvr-bgd:   #00ADBB;
 }
 .hvr-teal60{
     --hvr-color: #66CED6;
     --hvr-fill:  #66CED6;
-    --hvr-bgd:   #66CED6;
 }
 .hvr-teal30{
     --hvr-color: #B3E6EB;
     --hvr-fill:  #B3E6EB;
-    --hvr-bgd:   #B3E6EB;
 }
 .hvr-op06{
     --hvr-opacity: 0.6;
 }
 .hvr-1s{
     --hvr-transition: 1s;
+}
+.hvr-05s{
+    --hvr-transition: 0.5s;
 }
 .hvr-03s{
     --hvr-transition: 0.3s;
