@@ -92,21 +92,6 @@
 
 /* ----- < 768 ----- */
 @media screen and (max-width: 767px){
-
-}
-
-/* ----- > 768 ----- */
-@media screen and (min-width: 768px){
-    .banner-slogan{
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-}
-
-/* ----- < 1023 ----- */
-@media screen and (max-width: 1023px){
-    /* ----- product ----- */
     .content-pic, .content-info{
         max-width: 600px;
         margin: auto;
@@ -117,6 +102,37 @@
     .content-info{
         margin-top: 50px;
     }
+}
+
+/* ----- > 768 ----- */
+@media screen and (min-width: 768px){
+    .banner-slogan{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .product-content{
+        display: flex;
+        align-items: flex-start;
+    }
+    .pic-big{
+        width: 40vw;
+        height: 30vw;
+        margin-bottom: 5vw;
+    }
+    .content-info{
+        margin-left: 5vw;
+    }
+    .pic-small{
+        width: 10vw;
+    }
+    .pic-small:not(:last-child){
+        margin-right: 5vw;
+    }
+}
+
+/* ----- < 1023 ----- */
+@media screen and (max-width: 1023px){
+    /* ----- product ----- */
 
 }
 
