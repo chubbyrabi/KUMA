@@ -35,20 +35,27 @@
     color: var(--clr-color);
 }
 .p-style{
-    font-family: 'Noto Sans TC';
+    font-family: 'NeverMind','Noto Sans TC';
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6em;
     letter-spacing: 0.05em;
     color: var(--clr-color);
+}
+.no-letter-spacing{
+    letter-spacing: 0;
 }
 
 
 
 /* ----- 顏色設定 ----- */
-.clr-gray{
+.clr-gray333{
     --clr-color:#333;
     --clr-fill: #333;
+}
+.clr-gray80{
+    --clr-color:#808080;
+    --clr-fill: #808080;
 }
 .clr-white{
     --clr-color:#fff;
@@ -70,9 +77,17 @@
 
 
 /* ----- hvr 效果設定 ----- */
-.hvr-gray{
+.hvr-gray333{
     --hvr-color: #333;
     --hvr-fill:  #333;
+}
+.hvr-grayE6{
+    --hvr-color: #E6E6E6;
+    --hvr-fill:  #E6E6E6;
+}
+.hvr-grayF6F8FB{
+    --hvr-color: #F6F8FB;
+    --hvr-fill:  #F6F8FB;
 }
 .hvr-white{
     --hvr-color: #fff;
@@ -134,6 +149,9 @@ svg{
 a{
     color: var(--clr-color);
     text-decoration: none;
+}
+span{
+    color: var(--clr-color);
 }
 
 
@@ -315,9 +333,6 @@ header.js-hd-shadow{
 footer{
     position: relative;
     background-color: #00ADBB;
-}
-.footer p{
-    font-weight: 400;
 }
 
 /* ----- scrollTop ----- */
