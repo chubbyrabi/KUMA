@@ -40,6 +40,7 @@
     font-weight: 400;
     line-height: 1.6em;
     letter-spacing: 0.05em;
+    text-align: justify;
     color: var(--clr-color);
 }
 .no-letter-spacing{
@@ -52,6 +53,10 @@
 .clr-gray333{
     --clr-color:#333;
     --clr-fill: #333;
+}
+.clr-gray666{
+    --clr-color:#666;
+    --clr-fill: #666;
 }
 .clr-gray80{
     --clr-color:#808080;
@@ -72,6 +77,15 @@
 .clr-teal30{
     --clr-color:#B3E6EB;
     --clr-fill: #B3E6EB;
+}
+.bgd--white{
+    --bgd-color: #fff;
+}
+.bgd-F6F8FB{
+    --bgd-color: #F6F8FB;
+}
+.bgd-E6E6E6{
+    --bgd-color: #E6E6E6;
 }
 
 
@@ -105,8 +119,20 @@
     --hvr-color: #B3E6EB;
     --hvr-fill:  #B3E6EB;
 }
+.hvr-bgd-white{
+    --hvr-bgd-color: #fff;
+}
+.hvr-bgd-F6F8FB{
+    --hvr-bgd-color: #F6F8FB;
+}
+.hvr-bgd-E6E6E6{
+    --hvr-bgd-color: #E6E6E6;
+}
 .hvr-op06{
     --hvr-opacity: 0.6;
+}
+.hvr-bri095{
+    --hvr-bri: brightness(.95);
 }
 .hvr-1s{
     --hvr-transition: 1s;
@@ -153,6 +179,32 @@ a{
 span{
     color: var(--clr-color);
 }
+figure img{
+    transform: scale(1);
+    transition: var(--hvr-transition);
+    background-color: var(--bgd-color);
+}
+figcaption{
+    position: relative;
+    padding: 5px 0;
+    font-family: 'NeverMind','Noto Sans TC';
+    color: var(--clr-color);
+    background-color: var(--bgd-color);
+}
+figcaption p{
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+}
+figcaption span{
+    font-size: 12px;
+    font-weight: 300;
+}
+figure img:hover{
+    -webkit-filter: var(--hvr-bri);
+    transform: var(--hvr-scale);
+    transition: var(--hvr-transition);
+}
 
 
 
@@ -176,12 +228,21 @@ span{
 
 
 /* ----- btn 設定 ----- */
-.btn{
+.btn-EN{
     position: relative;
     padding: 10px 50px;
     border: none;
-    font-family: 'NeverMind','Noto Sans TC';
-    font-size: 28px;
+    font-family: 'NeverMind';
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.btn-TW{
+    position: relative;
+    padding: 10px 50px;
+    border: none;
+    font-family: 'Noto Sans TC';
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.05em;
 }
@@ -196,7 +257,7 @@ span{
 }
 .btn-animateBox.in{
     transform: scale(1);
-    transition: 0.5s 0.5s;
+    transition: 0.5s;
 }
 .btn-animateBox, .btn-animateBox.out{
     transform: scale(0);
@@ -569,7 +630,7 @@ footer{
         background-color: #fff;
         color: #00ADBB;
     }
-    .btn:hover::after{
+    .btn-EN:hover::after, .btn-TW:hover::after{
         position: absolute;
         top: -30px;
         right: -40px;

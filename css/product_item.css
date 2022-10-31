@@ -36,42 +36,53 @@
     padding: 5px;
 }
 
+
+
 /* ----- product ----- */
 .product{
     width: 100%;
 }
-.product-content{
+.product h3{
+    text-align: center;
+}
+
+/* ----- product-article ----- */
+.product-article, .product-feature div, .product-more{
     max-width: 1200px;
     margin: auto;
     padding: 50px;
 }
-.content-pic div{
+.article-pic div{
     background-color: #F6F8FB;
 }
 .pic-big{
     overflow: hidden;
-    margin-bottom: 5vw;
+    outline: 1px solid #E6E6E6;
 }
 .pic-big img{
     height: 100%;
-    object-fit: contain;
-    transform: scale(1.1);
+    object-fit: cover;
 }
 .pic-small{
     overflow: hidden;
     display: inline-block;
-    width: 30%;
+    outline: 1px solid #E6E6E6;
 }
-.pic-small:not(:last-child){
-    margin-right: 5%;
+.pic-small img{
+    height: 100%;
+    object-fit: cover;
 }
 .info-detail h2{
     padding-bottom: 20px;
 }
+/* .info-detail p{
+    text-align: justify;
+} */
 .info-detail p:nth-of-type(4){
     margin: 15px 0;
 }
 .info-shop{
+    margin-top: 40px;
     font-size: 0;
 }
 .shop-logo{
@@ -80,27 +91,40 @@
     border: 1px solid #333333;
     margin-bottom: 1.3vw;
 }
+.shop-logo:not(:last-child){
+    margin-right: 1.3vw;
+    /* margin-right: 15px; */
+}
 .shop-logo img{
     height: 100%;
     object-fit: contain;
 }
-.shop-logo:not(:last-child){
-    margin-right: 10px;
+/* ----- product-feature ----- */
+.product-feature{
+    background-color: #F6F8FB;
 }
 
 
 
 /* ----- < 768 ----- */
 @media screen and (max-width: 767px){
-    .content-pic, .content-info{
-        max-width: 600px;
-        margin: auto;
+    .pic-big{
+        width: calc(100vw - 100px);
+        height: calc(75vw - 75px);
+        margin-bottom: calc((20vw - 20px) / 3);
     }
     .pic-small{
-        display: none;
+        width: calc(20vw - 20px);
+        height: calc(20vw - 20px);
     }
-    .content-info{
+    .pic-small:not(:last-child){
+        margin-right: calc((20vw - 20px) / 3);
+    }
+    .article-info{
         margin-top: 50px;
+    }
+    .more-768{
+        display: none;
     }
 }
 
@@ -110,90 +134,67 @@
         top: 50%;
         transform: translateY(-50%);
     }
-    .product-content{
+    .product-article{
         display: flex;
         align-items: flex-start;
     }
     .pic-big{
         width: 40vw;
         height: 30vw;
-        margin-bottom: 5vw;
-    }
-    .content-info{
-        margin-left: 5vw;
+        margin-bottom: 2vw;
     }
     .pic-small{
-        width: 10vw;
+        width: 8.5vw;
+        height: 8.5vw;
     }
     .pic-small:not(:last-child){
-        margin-right: 5vw;
+        margin-right: 2vw;
     }
-}
-
-/* ----- < 1023 ----- */
-@media screen and (max-width: 1023px){
-    /* ----- product ----- */
-
+    .article-info{
+        margin-left: 5vw;
+    }
 }
 
 /* ----- > 1024 ----- */
 @media screen and (min-width: 1024px){
     /* ----- product ----- */
-    .product-content{
-        display: flex;
-        align-items: flex-start;
-    }
-    .pic-big{
-        width: 40vw;
-        height: 30vw;
-        margin-bottom: 5vw;
-    }
-    .content-info{
-        margin-left: 5vw;
-    }
-    .pic-small{
-        width: 10vw;
-    }
-    .pic-small:not(:last-child){
-        margin-right: 5vw;
-    }
     .shop-logo{
         height: 40px;
-    }
-    .shop-logo:not(:last-child){
-        margin-right: 15px;
     }
 }
 
 /* ----- > 1200 ----- */
 @media screen and (min-width: 1200px){
-    /* ----- 通用設定 ----- */
     /* ----- banner ----- */
     .breadcrumb a:hover{
         color: var(--hvr-color);
     }
     /* ----- product ----- */
-    .content-info{
+    .pic-big{
+        width: 400px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .pic-small{
+        width: 85px;
+        height: 85px;
+    }
+    .pic-small:not(:last-child){
+        margin-right: 20px;
+    }
+    .article-info{
         margin-left: 80px;
     }
     .shop-logo{
         margin-bottom: 15px;
     }
-    .pic-big{
-        width: 400px;
-        height: 300px;
-        margin-bottom: 50px;
+    .shop-logo:not(:last-child){
+        margin-right: 15px;
     }
-    .pic-small{
-        width: 100px;
-    }
-    .pic-small:not(:last-child){
-        margin-right: 50px;
-    }
-    .pic-small img{
+    .article-pic img{
         transition: var(--hvr-transition);
     }
-    .pic-small img:hover{
+    .article-pic img:hover{
         transform: var(--hvr-scale);
         transition: var(--hvr-transition);
     }
@@ -205,6 +206,4 @@
     .banner-slogan{
         left: calc(50% - 560px)
     }
-    /* ----- product ----- */
-
 }

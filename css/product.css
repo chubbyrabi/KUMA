@@ -54,33 +54,11 @@
 .series-list{
     display: none;
 }
-.product-item{
+.item{
     display: block;
     box-sizing: border-box;
     margin: 15px;
     overflow: hidden;
-}
-figure img{
-    transform: scale(1);
-    transition: var(--hvr-transition);
-    background-color: #F6F8FB;
-}
-figcaption{
-    position: relative;
-    padding: 5px 0;
-    font-family: 'NeverMind','Noto Sans TC';
-    color: var(--clr-color);
-    background-color: white;
-}
-figcaption p{
-    font-size: 16px;
-    line-height: 1.5em;
-    letter-spacing: 0.05em;
-}
-figcaption span{
-    font-size: 12px;
-    font-weight: 300;
-    color: #666;
 }
 .list-series, .banner li{
     display: none;

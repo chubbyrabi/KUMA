@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="pic/logo/KUMA_icon.ico" type="image/x-icon">
 </head>
+<style>
+    .btn-animateBox.in{
+        transform: scale(1);
+        transition: 0.5s 0.5s;
+    }
+    .btn-animateBox, .btn-animateBox.out{
+        transform: scale(0);
+        transition: 0.5s;
+        text-align: center;
+    }
+</style>
 <body style="padding-top: 0;">
     <header>
         <div class="navbar">
@@ -265,7 +276,7 @@
             </div>
             <span class="activity-decoStr h2-style clr-gray333 js-scroll">＂讓我們開始吧 !＂</span>
             <div class="btn-animateBox js-scroll">
-                <button type="button" class="btn btn-teal hvr-pointer" onclick="window.location.href='#'">START</button>
+                <button type="button" class="btn-EN btn-teal hvr-pointer" onclick="window.location.href='#'">START</button>
             </div>
             <div class="activity-bgd"><img src="pic/integrate/bgd_01.webp" alt="KUMA-50周年活動背景圖"></div>
     </section>

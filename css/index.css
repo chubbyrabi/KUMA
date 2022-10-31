@@ -13,6 +13,7 @@
     top: 20vh;
     background-color: #B3E6EB;
 }
+
 /* ----- 日文裝飾字 定位 ----- */
 .publicity-title{
     writing-mode: vertical-rl;
@@ -37,6 +38,7 @@
     font-weight: 700;
     line-height: 1.7em;
 }
+
 /* ----- css 橡皮擦動畫 輪播 ----- */
 /* ----- 待整理：與輪播點點一起改寫成 JS 迴圈控制數量 ----- */
 .show-animate{
@@ -80,6 +82,7 @@
     width: auto;
     animation: shadow-rotate 2s  ease infinite;
 }
+
 /* ----- JS 橡皮擦動畫 shock ----- */
 .js-shock.eraser::after{
     position: absolute;
@@ -96,6 +99,7 @@
 .js-shock.eraser.tall::after   { top: -30px; }
 .js-shock.eraser.normal::after { top:  -5px; }
 .js-shock.eraser.short::after  { top:  40px; }
+
 /* ----- show-tools ----- */
 .show-tools{
     height: 12vh;
