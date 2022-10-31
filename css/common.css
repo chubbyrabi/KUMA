@@ -119,6 +119,10 @@
     --hvr-color: #B3E6EB;
     --hvr-fill:  #B3E6EB;
 }
+.hvr-none{
+    --hvr-color: none;
+    --hvr-fill:  none;
+}
 .hvr-bgd-white{
     --hvr-bgd-color: #fff;
 }

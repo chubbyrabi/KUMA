@@ -1,0 +1,144 @@
+/* ----- banner ----- */
+.banner{
+    position: relative;
+    max-width: 1500px;
+    height: 40vw;
+    margin: auto;
+    overflow: hidden;
+}
+.activity-bgd{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 100vw;
+    height: 40vw;
+}
+.activity-bgd img{
+    height: 100%;
+    transform: scale(1.1);
+    object-fit: cover;
+    object-position: center 65%;
+}
+
+
+/* ----- elevator ----- */
+aside, aside.out{
+    display: none;
+}
+.list-item{
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.list-item:not(:last-child){
+    margin-bottom: 25px;
+}
+
+
+
+/* ----- activity ----- */
+.act-title{
+    max-width: 1200px;
+    height: 80px;
+    margin: 10px;
+    fill: none;
+    /* fill-opacity: 0; */
+    stroke: var(--clr-color);
+    stroke-width: 1px;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill-rule: evenodd;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+    animation: drawing-svg 2s infinite;
+}
+
+.activity{
+    width: 100%;
+    overflow: hidden;
+}
+/* .activity section{
+    width: 100%;
+    overflow: hidden;
+} */
+.area1200{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+}
+/* ----- act-support ----- */
+#act-support{
+    width: 100%;
+    padding: 50px;
+    background-color: #00ADBB;
+}
+.prize-list{
+}
+.prize-list li{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    background-color: #fff;
+}
+.prize-list li+li{
+    margin-left: 30px;
+}
+.prize-list li div{
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background-color: #FFCC33;
+    color: #fff;
+    font-family: 'NeverMind';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    /* vertical-align: middle; */
+    line-height: 3em;
+}
+.prize-list li img{
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ----- > 768 ----- */
+@media screen and (min-width: 768px){
+
+}
+
+/* ----- >= 1024 ----- */
+@media screen and (min-width: 1024px){
+
+}
+
+/* ----- >= 1200 ----- */
+@media screen and (min-width: 1200px){
+    aside.in{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        width: 60px;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+    aside, aside.out{
+        top: 50%;
+        transform: translateY(-50%);
+        right: -100px;
+        transition: 0.5s;
+    }
+}
+
+
+
+@keyframes drawing-svg{
+    100% {
+        stroke-dashoffset: 0;
+        transform: scale(1);
+    }
+}
