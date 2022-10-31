@@ -29,7 +29,7 @@
     display: inline-block;
 }
 .breadcrumb li:last-child a{
-    font-weight: 500;
+    font-weight: 600;
 }
 .breadcrumb li:not(:last-child)::after{
     content: "/ ";
@@ -76,7 +76,7 @@
 }
 .shop-logo{
     display: inline-block;
-    height: 50px;
+    height: 35px;
     border: 1px solid #333333;
     margin-bottom: 1.3vw;
 }
@@ -85,7 +85,7 @@
     object-fit: contain;
 }
 .shop-logo:not(:last-child){
-    margin-right: 1.3vw;
+    margin-right: 10px;
 }
 
 
@@ -157,7 +157,12 @@
     .pic-small:not(:last-child){
         margin-right: 5vw;
     }
-
+    .shop-logo{
+        height: 40px;
+    }
+    .shop-logo:not(:last-child){
+        margin-right: 15px;
+    }
 }
 
 /* ----- > 1200 ----- */
@@ -173,9 +178,6 @@
     }
     .shop-logo{
         margin-bottom: 15px;
-    }
-    .shop-logo:not(:last-child){
-        margin-right: 15px;
     }
     .pic-big{
         width: 400px;
@@ -195,7 +197,6 @@
         transform: var(--hvr-scale);
         transition: var(--hvr-transition);
     }
-
 }
 
 /* ----- > 1400 ----- */
