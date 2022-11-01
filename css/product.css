@@ -27,6 +27,9 @@
     max-width: 1380px;
     margin: 5px auto;
 }
+.breadcrumb ol{
+    text-align: left;
+}
 .breadcrumb li{
     display: inline-block;
 }
@@ -104,6 +107,9 @@
         margin: 20px auto 5px;
         padding: 5px;
         border-bottom: 2px solid #00ADBB;
+    }
+    .product-list{
+        padding: 0 15px;
     }
 }
 

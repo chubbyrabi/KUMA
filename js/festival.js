@@ -96,6 +96,7 @@ $(function scroll(){
             }
             else if(winW >= 768){
                 let objTop = getOffsetTop(this);
+                console.log(objTop)
                 if (scrTop > objTop - winH + winH / 5){
                     $(this).removeClass('out');
                     $(this).addClass('in');

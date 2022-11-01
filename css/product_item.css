@@ -25,6 +25,9 @@
     max-width: 1380px;
     margin: 5px auto;
 }
+.breadcrumb ol{
+    text-align: left;
+}
 .breadcrumb li{
     display: inline-block;
 }
@@ -50,7 +53,7 @@
 .product-article, .product-feature div, .product-more{
     max-width: 1200px;
     margin: auto;
-    padding: 50px;
+    padding: 30px;
 }
 .article-pic div{
     background-color: #F6F8FB;

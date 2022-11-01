@@ -16,6 +16,7 @@
     font-weight: 700;
     line-height: 1.5em;
     letter-spacing: 0.05em;
+    text-align: inherit;
     color: var(--clr-color);
 }
 .h3-style{
@@ -24,6 +25,7 @@
     font-weight: 500;
     line-height: 1.5em;
     letter-spacing: 0.05em;
+    text-align: inherit;
     color: var(--clr-color);
 }
 .h4-style{
@@ -32,6 +34,7 @@
     font-weight: 400;
     line-height: 1.5em;
     letter-spacing: 0.05em;
+    text-align: inherit;
     color: var(--clr-color);
 }
 .p-style{
