@@ -141,17 +141,6 @@ aside, aside.out{
     fill-opacity: 0;
 }
 
-/* ----- fest-title 動畫 ----- */
-.bus-pic, .bus-txt{
-    display: inline-block;
-    width: calc(50% - 30px);
-    vertical-align: text-top;
-}
-/* .bus-txt div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
 
 
 
@@ -248,7 +237,17 @@ aside, aside.out{
     .activity-bgd img{
         transform: scale(1.3);
     }
-
+    /* ----- fest-title 動畫 ----- */
+.bus-pic, .bus-txt{
+    display: inline-block;
+    width: calc(50% - 30px);
+    vertical-align: text-top;
+    }
+    /* .bus-txt div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
 }
 
 
