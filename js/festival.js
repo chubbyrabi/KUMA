@@ -56,6 +56,9 @@ $(function click(){
 
 
 
+// Banner 立即顯示動畫
+$('.js-instant').addClass('in');
+
 // 捲動螢幕事件
 $(function scroll(){
     $(window).on('scroll', function (){
