@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            background-color: yellow;
+        }
+        .gst{
+            position: fixed;
+            margin-top: 80px;
+            font-size: 40px;
+        }
+        .mouse{
+            position: fixed;
+            margin-top: 150px;
+            font-size: 40px;
+        }
+        .color{
+            transition: 0.5s;
+            background-color: yellow;
+        }
+        .test-box{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: aquamarine;
+            z-index: -1;
+        }
+        .box-down{
+            width: 500px;
+            height: 50px;
+            border: 1px solid;
+            position:absolute;
+            bottom:0px;
+            overflow: hidden;
+        }
+        #line{
+            width: 100px;
+            height: 5px;
+            background-color: cadetblue;
+            position: absolute;
+            transition: 0.15s;
+            /* left: 100px; */
+        }
+        .ballcolor{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            border-radius: 50%;
+            opacity: 0;
+            position: absolute;
+            /* left: 50px;
+            top: 50px; */
+            transition: 0.15s;
+        }
+        /* .invert{
+        -webkit-filter:invert(1);
+        } */
+
+        /*
+        svg {
+        animation: aaa-svg 2s infinite;
+        animation-delay: -6s;
+        }
+        */
+        /* @keyframes aaa-svg {
+        0% {
+            transform: scale(1)
+        }
+        50% {
+            transform: scale(1.1)
+        }
+        100% {
+            transform: scale(1)
+        }
+        } */
+
+        .access{
+            margin-top: 100px;
+            width: 300px;
+            fill: none;
+            /* fill-opacity: 0; */
+            stroke: #333;
+            stroke-width: 2px;
+            stroke-miterlimit: 10;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill-rule: evenodd;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawing-svg 2s infinite;
+        }
+
+        @keyframes drawing-svg {
+            100% {
+                stroke-dashoffset: 0;
+                transform: scale(1)
+            }
+        }
+        
+    </style>
+</head>
+<body style="height: 1000px;">
+
+    <p class="gst" id="jsScrollTop">000</p>
+    <p class="mouse" id="mouse">000</p>
+
+    <div class="test-box">
+        <div class="box-down">
+            <div id="line"></div>
+        </div>
+        <div id="ball" class="ballcolor "></div>
+    </div>
+
+    <div class="svgBox">
+        <svg class="access" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 289 65">
+            <path d="M1013.93,6425.07h12.46l4.17-12.17h19.16l4.32,12.17h13.6l-21.17-55.3H1035.1Zm19.66-21.67,6.76-20.16,6.7,20.16h-13.46Zm39.45-5.33c0,14.26,5.83,28.01,28.66,28.01a55.216,55.216,0,0,0,12.02-1.3l-1.22-11.3a38.282,38.282,0,0,1-10.37,1.51c-9.5,0-15.84-4.75-15.84-16.78,0-12.81,5.47-18.57,15.55-18.57a31.577,31.577,0,0,1,9.79,1.51l2.02-11.09a63.306,63.306,0,0,0-12.1-1.3c-23.04,0-28.51,14.69-28.51,29.24v0.07Zm48.89,0c0,14.26,5.83,28.01,28.66,28.01a55.216,55.216,0,0,0,12.02-1.3l-1.22-11.3a38.282,38.282,0,0,1-10.37,1.51c-9.51,0-15.84-4.75-15.84-16.78,0-12.81,5.47-18.57,15.55-18.57a31.577,31.577,0,0,1,9.79,1.51l2.02-11.09a63.4,63.4,0,0,0-12.1-1.3c-23.04,0-28.51,14.69-28.51,29.24v0.07Zm63.5-17.64h19.3v-10.66h-31.39v55.3h32.69v-10.66h-20.6V6402.1h16.71v-10.22h-16.71v-11.45Zm63.51-8.86a41.342,41.342,0,0,0-15.2-2.59c-6.76,0-18,2.81-18,16.49,0,9.36,5.33,12.6,12.96,15.98,6.84,3.03,9.36,5.19,9.36,8.36,0,4.24-3.52,5.32-6.33,5.32a35.164,35.164,0,0,1-14.04-3.6l-3.1,11.24c3.53,1.65,11.23,3.24,17.79,3.24,9.21,0,18.21-3.75,18.21-17,0-10.15-7.27-13.89-14.9-17.64-4.25-2.09-7.71-3.81-7.71-6.62,0-4.61,4.18-5.19,7.13-5.19a26.6,26.6,0,0,1,10.52,2.67Zm44.42,0a41.323,41.323,0,0,0-15.19-2.59c-6.77,0-18,2.81-18,16.49,0,9.36,5.32,12.6,12.96,15.98,6.84,3.03,9.36,5.19,9.36,8.36,0,4.24-3.53,5.32-6.34,5.32a35.164,35.164,0,0,1-14.04-3.6l-3.1,11.24c3.53,1.65,11.24,3.24,17.79,3.24,9.22,0,18.22-3.75,18.22-17,0-10.15-7.28-13.89-14.91-17.64-4.25-2.09-7.7-3.81-7.7-6.62,0-4.61,4.17-5.19,7.13-5.19a26.6,26.6,0,0,1,10.51,2.67Z" transform="translate(-1010 -6365)"></path>
+          </svg>
+    </div>
+
+
+<!-- <script>
+    function myFunction() {
+
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("test").className = "test";
+        } else {
+            document.getElementById("test").className = "";
+        }
+    }
+    window.onscroll = function() {myFunction()};
+</script> -->
+
+<script>
+    function getScrollTop(){
+    var bodyTop = 0;
+
+    if (typeof window.pageYOffset != "undefined") {
+        bodyTop = window.pageYOffset;
+
+    } else if (typeof document.compatMode != "undefined"
+                && document.compatMode != "BackCompat") {
+        bodyTop = document.documentElement.scrollTop;
+
+    } else if (typeof document.body != "undefined") {
+        bodyTop = document.body.scrollTop;
+    }
+
+    document.getElementById("jsScrollTop").innerText = ("螢幕捲動高度："+bodyTop);
+
+    if( bodyTop > 50){
+        document.querySelector('.gst').classList.add('color');
+    } else {
+        document.querySelector('.gst').classList.remove('color');
+    }
+    }
+    window.onscroll = function() {getScrollTop()};
+</script>
+
+<script>
+    function mousemove(event){
+        let line = document.getElementById("line");
+        let ball = document.getElementById("ball");
+
+        document.getElementById("mouse").innerText = 
+        ("滑鼠位置：X軸 " + event.pageX + "，Y軸 "+ event.clientY);
+
+        //底線
+        if( event.pageX > 50 && event.pageX < window.innerWidth-50 &&
+            event.pageY > 50 && event.pageY < 500){
+            line.style.left = event.pageX -50 + "px";
+        }else{
+            line.style.left = 50+ "%";
+        }
+        //球球
+        // window.innerWidth 螢幕的寬
+        if( event.pageX > 50 && event.pageX < window.innerWidth-50 &&
+            event.pageY > 50 && event.pageY < 450){
+            ball.style.opacity = 1;
+            ball.style.left = event.pageX -50 + "px";
+            ball.style.top = event.pageY -50 + "px";
+        }else {
+            ball.style.opacity = 0;
+        }
+    }
+    window.addEventListener('mousemove', mousemove);
+
+</script>
+
+</body>
+</html>
