@@ -296,7 +296,9 @@ header.js-hd-shadow{
 }
 .nav-logo svg{
     height: 30px;
+    width: auto;
 }
+
 
 /* ----- hb-animation ----- */
 .nav-hb{
