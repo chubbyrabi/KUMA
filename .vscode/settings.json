@@ -13,5 +13,6 @@
         "Tibame",
         "tsutaya",
         "webp"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
